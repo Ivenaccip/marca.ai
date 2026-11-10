@@ -1,0 +1,343 @@
+{
+ "clasificacion": [
+  {
+   "titulo": "Tu número de WhatsApp de ventas puede caerse antes de que termine el año",
+   "dominio": "desconocido",
+   "comentario": "Riesgo de plataforma y regulación de telecomunicaciones. Fechas de la CURP confirmadas: a las líneas con terminación 6 les quedan 5 días (15 de noviembre). Corregir el dato de precios: desde el 1 de octubre de 2026 los mensajes de servicio ya se cobran (cerca de US$0.0085 en México) y no se confirmó lo de «1,000 gratis»; las conversaciones que abre un anuncio de clic a WhatsApp siguen gratis dentro de su ventana."
+  },
+  {
+   "titulo": "Tus cuentas maestras no tienen candado: si te roban el Gmail o el chip, se cae todo el sistema",
+   "dominio": "desconocido",
+   "comentario": "Frontera: la mecánica (doble factor, passkeys, gestor de contraseñas) es seguridad informática que un ingeniero suele dominar; lo que de verdad no ve es la titularidad legal (portafolio de Meta, números y tarjetas a nombre de terceros) y el acceso de emergencia. Sugerencia: retitularlo como «¿A nombre de quién están tus cuentas, números y tarjetas?» para que quede claramente fuera de su dominio. Precio de Bitwarden confirmado."
+  },
+  {
+   "titulo": "Tu régimen fiscal 2027 se decide antes de enero, no en abril",
+   "dominio": "desconocido",
+   "comentario": "Fiscal. Actualizar: el Congreso ya aprobó subir el tope de RESICO de personas físicas a 5 millones y la Ley de Ingresos 2027 trae la opción de pagar IVA de 7% sobre lo cobrado; falta confirmar su publicación en el DOF. La simulación debe tener 4 escenarios, no 3."
+  },
+  {
+   "titulo": "Tus setters pueden ser legalmente tus empleados aunque firmen como comisionistas",
+   "dominio": "desconocido",
+   "comentario": "Laboral. Artículo 285 de la LFT confirmado; la excepción es quien no ejecuta personalmente el trabajo o solo interviene en operaciones aisladas."
+  },
+  {
+   "titulo": "Comisiones sin reglas escritas: pagas por dinero que no entró y los referidos provocan pleitos",
+   "dominio": "desconocido",
+   "comentario": "Compensación comercial y fiscal. Requisito de pago por transferencia arriba de $2,000 confirmado (LISR art. 27, fr. III); pagar mal también hace perder el IVA acreditable."
+  },
+  {
+   "titulo": "Cada lead de ManyChat, WhatsApp o Zoom te obliga bajo la nueva ley de datos personales",
+   "dominio": "desconocido",
+   "comentario": "Datos personales. Fechas, autoridad y multas confirmadas; cambiar «aviso corto» por «aviso simplificado», que es el término de la ley nueva."
+  },
+  {
+   "titulo": "La descripción del proyecto no es un contrato y tu código reciclado podría no ser tuyo",
+   "dominio": "desconocido",
+   "comentario": "Contratos y propiedad intelectual. Artículo 83 de la LFDA confirmado; complementar con la sentencia de la Suprema Corte de 2025 sobre obras generadas solo por IA (ver reemplazos sugeridos)."
+  },
+  {
+   "titulo": "Cada cobro trae dinero que no es tuyo y una captura de pantalla no es un pago",
+   "dominio": "desconocido",
+   "comentario": "Finanzas operativas y prevención de fraude. Sin observaciones."
+  },
+  {
+   "titulo": "No tienes menú de precios ni precio piso: una venta «buena» puede dejarte casi nada",
+   "dominio": "desconocido",
+   "comentario": "Precios y oferta. Tarifa de Stripe confirmada (más IVA; tarjetas internacionales con 0.5% adicional)."
+  },
+  {
+   "titulo": "«Ingeniero de IA» no es algo que un dueño de empresa sepa comprar",
+   "dominio": "desconocido",
+   "comentario": "Marca y posicionamiento. Sin observaciones."
+  },
+  {
+   "titulo": "Meta optimiza tu pauta para conseguir mensajes, no clientes",
+   "dominio": "desconocido",
+   "comentario": "Economía de la pauta y atribución. El primer paso es técnico (cómodo para él), pero el valor está en el tope de costo por lead calificado. Matiz: la acción nativa de ManyChat solo envía LeadSubmitted y Purchase y está documentada para Instagram y Messenger; para WhatsApp conviene mandar el evento desde n8n."
+  },
+  {
+   "titulo": "Tú eres el cuello de botella del sistema que estás construyendo",
+   "dominio": "desconocido",
+   "comentario": "Gestión y operación. Agregar un dato que refuerza el punto: las tareas programadas tienen tope diario (Max: 15 corridas), así que tampoco se puede delegar todo en muchas tareas."
+  },
+  {
+   "titulo": "El agente que lee DMs de desconocidos no debe tener llaves",
+   "dominio": "conocido",
+   "comentario": "Único punto de su dominio (dentro del 10% permitido). Repite reglas que ya están en principios, orquestación y riesgos; es el primer candidato a salir si hace falta espacio. Dato confirmado: las tareas programadas incluyen por defecto todos los conectores y pueden escribir sin pedir permiso."
+  },
+  {
+   "titulo": "Nadie mide cuánto tarda en contestarse un lead ni cómo hablan tus setters en tu nombre",
+   "dominio": "desconocido",
+   "comentario": "Operación comercial. Dato del estudio de HBR de 2011 confirmado; no atribuirle las cifras de «21 veces» o «100 veces», que son de otro estudio."
+  },
+  {
+   "titulo": "El setter vende y tú heredas la promesa: falta el traspaso de la venta a la entrega",
+   "dominio": "desconocido",
+   "comentario": "Experiencia del cliente y manejo de expectativas. Sin observaciones."
+  },
+  {
+   "titulo": "Tus mejores casos quizá no los puedes publicar",
+   "dominio": "desconocido",
+   "comentario": "Marketing B2B y legal (publicidad veraz y derechos de imagen). Sin observaciones."
+  }
+ ],
+ "proporcion_actual": "15 de 16 puntos ciegos (93.75%) son de dominio desconocido y 1 de 16 (6.25%) es conocido (#12, el agente que lee DMs no debe tener llaves). Cumple la regla 90/10, pero con poco margen: #1 (cuentas sin candado) es frontera porque la parte de doble factor y gestor de contraseñas es seguridad informática que él suele dominar; si se contara como conocido quedaría 14 de 16 (87.5%) y no cumpliría. Para blindarla: (a) retitular #1 alrededor de la titularidad legal de cuentas, números y tarjetas; (b) si la lista final se recorta a 10, que haya máximo 1 conocido; (c) usar los reemplazos sugeridos si sale #12 o si se quiere más margen (el mejor sustituto es el de alta de proveedor y plazos de pago).",
+ "reemplazos_sugeridos": [
+  {
+   "titulo": "Una empresa grande no te paga hasta que pasas su alta de proveedor, y después te paga según su calendario",
+   "explicacion": "Antes del primer pago, el área de compras de un corporativo pide un expediente: Constancia de Situación Fiscal, opinión de cumplimiento del SAT (la «32-D») positiva y reciente (algunas la piden con menos de 30 días de emitida), carátula bancaria, identificación o acta, contrato, NDA, aviso de privacidad y a veces póliza de seguro. Si tu opinión sale negativa por una declaración atrasada (aunque sea en ceros), se atora el pago. Ya dado de alta, tu factura entra a su ciclo de pagos, que puede ser de 30, 60 o más días. Si ese cliente está en Cadenas Productivas de Nafin, puedes adelantar el cobro con factoraje: la afiliación del proveedor no tiene costo y solo pagas el descuento por los días que adelantas.",
+   "por_que_importa": "El proyecto puede estar entregado y el dinero detenido semanas por un papel, mientras tú ya pagaste pauta, herramientas y, si no aplicas la regla de «comisión solo sobre lo cobrado», comisiones. Tener el expediente listo acorta el primer cobro y te hace ver como proveedor formal frente a agencias grandes.",
+   "donde_se_conecta": "Administración (Enlace descarga cada mes la Constancia y la 32-D; Cobra registra el plazo real de pago de cada cliente), Ventas (Cierre pregunta en la propuesta por el proceso de alta y el plazo de pago), flujo de caja a 13 semanas (cobros con fecha real) y Legal (paquete de documentos de proveedor).",
+   "primer_paso": "Hoy descarga tu opinión de cumplimiento en sat.gob.mx; si no sale positiva, mándasela a tu contadora para que corrija la causa. Esta semana arma en Google Drive la carpeta «Expediente de proveedor» (Constancia, 32-D, carátula bancaria, identificación, aviso de privacidad y NDA tipo) y agrega a tu plantilla de propuesta la pregunta «¿Cuál es su proceso de alta y su plazo de pago?» y una cláusula de anticipo antes de iniciar.",
+   "esfuerzo": "bajo",
+   "impacto": "alto",
+   "prioridad": "P1",
+   "dominio": "desconocido",
+   "pilar": "admin",
+   "fuentes": [
+    "https://www.satfacil.com.mx/blog/opinion-cumplimiento-sat-positiva",
+    "https://www.elcontribuyente.mx/2023/01/para-que-sirve-la-opinion-de-cumplimiento-o-carta-32-d-del-sat/",
+    "https://www.nafin.com/portalnf/files/secciones/modulo-de-atencion-virtual/pdf/factoraje/cadenas_productivas.pdf",
+    "https://www.banamex.com/es/empresasygobierno/financiamiento/corto-plazo/cadenas-nafinsa.htm"
+   ]
+  },
+  {
+   "titulo": "El nombre de tu marca no es tuyo hasta que lo registras en el IMPI, y tu plan lo deja para abril de 2027",
+   "explicacion": "En México el uso exclusivo de una marca lo da el registro ante el IMPI, no tener el dominio, la cuenta de Instagram ni años publicando. Cada peso de pauta y cada video hacen más valioso un nombre que alguien más podría registrar primero. Se registra por clase; para ti probablemente 42 (desarrollo de software e IA), 41 (capacitación) y 35 (consultoría y publicidad). La solicitud en línea cuesta alrededor de $2,800 pesos por clase con IVA (cerca de $3,130 en ventanilla; confírmalo en la tarifa vigente), el examen tarda de 4 a 6 meses si no hay objeciones (algunas guías calculan de 6 a 12 meses en total) y el registro dura 10 años renovables.",
+   "por_que_importa": "Si otro lo registra antes en tus clases, puede obligarte a cambiar de nombre, bajar contenido o negociar con él justo cuando la marca ya vende; además, clientes corporativos y plataformas piden pruebas de titularidad para verificar cuentas o defenderte de suplantaciones.",
+   "donde_se_conecta": "Legal (Activos y vencimientos: expediente, clases y fecha de renovación; Vigía vigila solicitudes parecidas), Marca (decidir el nombre definitivo en la página de Posicionamiento antes de registrarlo) y roadmap (mover el registro de la Fase 3 a la Fase 1).",
+   "primer_paso": "Esta semana busca tu nombre y sus variantes en MARCia, el buscador del IMPI, en las clases 35, 41 y 42; si está libre, presenta la solicitud en Marca en Línea a nombre de quien será dueño de la marca (tú o tu sociedad), y si aparece algo parecido, paga una hora con un abogado de propiedad industrial antes de presentar.",
+   "esfuerzo": "bajo",
+   "impacto": "alto",
+   "prioridad": "P1",
+   "dominio": "desconocido",
+   "pilar": "marca",
+   "fuentes": [
+    "https://www.elimparcial.com/mexico/2026/07/14/como-registrar-una-marca-ante-el-impi-el-caso-del-pato-merlin-explica-el-tramite-costo-y-beneficios-en-2026/",
+    "https://praxiumconsultores.com/blog/cuanto-cuesta-registrar-una-marca-en-el-impi",
+    "https://www.noticiasgobierno.com/como-registrar-marca-impi-2026/"
+   ]
+  },
+  {
+   "titulo": "Si un error de tu bot le cuesta dinero a un cliente, hoy lo pagas tú: no tienes seguro de responsabilidad profesional",
+   "explicacion": "El límite de responsabilidad del contrato reduce el riesgo, pero no lo elimina: un juez puede no respetarlo y los gastos de abogado salen igual. En México hay pólizas de responsabilidad civil profesional para empresas de tecnología (errores y omisiones) que cubren reclamaciones por fallas en tu servicio, incluidas las de colaboradores o subcontratistas, más los gastos de defensa; y pólizas de ciberriesgo para fugas de datos e interrupción. La responsabilidad civil «general» no cubre errores profesionales.",
+   "por_que_importa": "Entregas sistemas que deciden, cotizan o hablan con los clientes de tu cliente y que manejan sus datos: un bot que da un precio equivocado, una automatización que borra registros o una fuga pueden generar un reclamo mayor que lo que cobraste. Si operas como persona física, sale de tu patrimonio.",
+   "donde_se_conecta": "Legal (Notario: alinear el límite de responsabilidad del contrato marco con la suma asegurada), Clientes (Entrega: acta y garantía acotada), Administración (costo anual dentro del precio piso) y Activos y vencimientos (renovación de la póliza).",
+   "primer_paso": "Esta semana pide a un corredor de seguros cotización de «responsabilidad civil profesional para empresas de tecnología» y de «ciberriesgo» con tres datos: ingresos anuales, tipo de proyectos (bots, automatizaciones, datos personales de terceros) y el límite de responsabilidad que usas en tus contratos; pregunta por escrito por exclusiones de IA, multas de datos personales y trabajo de subcontratistas.",
+   "esfuerzo": "bajo",
+   "impacto": "alto",
+   "prioridad": "P2",
+   "dominio": "desconocido",
+   "pilar": "legal",
+   "fuentes": [
+    "https://www.chubb.com/mx-es/empresas/seguro-de-responsabilidad-civil-profesional-para-empresas-de-tecnologia.html",
+    "https://orgn-aigmx.dmp.aig.com/content/dam/aig/lac/mexico/documents/brochures/dc-seguro-de-responsabilidad-civil-profesional.pdf",
+    "https://runahr.com/mx/recursos/seguros/seguro-empresas-seguro-de-responsabilidad-profesional/",
+    "https://idconline.mx/corporativo/2024/12/09/riesgos-ciberneticos-que-pueden-evitarse-con-un-seguro"
+   ]
+  },
+  {
+   "titulo": "Lo que generan tus agentes puede no tener autor: la Suprema Corte resolvió en 2025 que una obra hecha solo por IA no se protege",
+   "explicacion": "En el Amparo Directo 6/2025 la Suprema Corte confirmó que solo una persona física puede ser autora y que una obra generada al 100% por IA no se registra ni se protege con derecho de autor. Hay diferencia entre «hecho con IA» (tú diriges, decides y editas) y «hecho por IA». Para tu negocio cambia dos cosas: lo que «cedes» al cliente puede no ser una obra protegida, y tus componentes reutilizables y tu contenido valen por el aporte humano que puedas demostrar y por lo que mantienes confidencial.",
+   "por_que_importa": "Si tus agentes escriben la mayor parte del código, un cliente o un competidor podría alegar que no hay derechos que ceder o defender; tu protección real queda en el contrato (cesión, licencia y confidencialidad), el secreto industrial y la evidencia de tu aporte.",
+   "donde_se_conecta": "Legal (Notario: cláusula de uso de herramientas de IA y de entregables), Producto (Arquitecto y Arqueólogo: decisiones de arquitectura, revisiones y PRs como evidencia del aporte humano; campo Derechos en la Biblioteca) y Marca (contenido y avatares generados con IA).",
+   "primer_paso": "En la misma cotización de plantillas con el abogado de propiedad intelectual, pide una cláusula que diga que usas herramientas de IA bajo tu dirección, qué se cede, qué se licencia y que el código, los prompts y la documentación son información confidencial; y deja como regla que cada entrega lleve su registro de decisiones y la revisión humana en el PR.",
+   "esfuerzo": "bajo",
+   "impacto": "medio",
+   "prioridad": "P2",
+   "dominio": "desconocido",
+   "pilar": "legal",
+   "fuentes": [
+    "https://www.scjn.gob.mx/sites/default/files/listas/documento_dos/2025-06/AD%206-2025.pdf",
+    "https://expansion.mx/tecnologia/2025/07/16/obras-hechas-con-ia-no-tienen-derecho-de-autor-scjn",
+    "https://www.perezllorca.com/es-mx/actualidad/nota-juridica/comentario-a-la-sentencia-dictada-en-el-amparo-directo-6-2025-por-la-segunda-sala-de-la-scjn-sobre-el-registro-de-obras-generadas-por-inteligencia-artificial-2/",
+    "https://basham.com.mx/en/la-suprema-corte-de-justicia-de-la-nacion-confirma-que-las-obras-generadas-por-inteligencia-artificial-no-pueden-ser-registradas-como-propiedad-intelectual-en-mexico/"
+   ]
+  }
+ ],
+ "verificaciones": [
+  {
+   "afirmacion": "Punto ciego #0 y Fase 0: las líneas de prepago deben quedar vinculadas a la CURP con fecha según su último dígito (terminación 6: 15 de noviembre; 7: 30 de noviembre; 8: 15 de diciembre; 9: 31 de diciembre de 2026) y una línea suspendida no recibe el SMS para verificar WhatsApp.",
+   "estado": "correcta",
+   "correccion": "Confirmado por varias fuentes; al 2 de noviembre la CRT reportaba 100.5 millones de líneas vinculadas. Hoy es 10 de noviembre: a las líneas con terminación 6 les quedan 5 días. Agregar dos datos: la línea suspendida no hace ni recibe llamadas ni SMS (solo emergencias), así que tampoco llegan códigos de bancos ni de WhatsApp; y hay 90 días después de la suspensión para regularizarla y conservar el número. El trámite se hace en el portal oficial de gob.mx y funciona aun con la línea suspendida.",
+   "fuente": "https://www.infobae.com/mexico/2026/07/25/registro-de-lineas-con-curp-fechas-limite-de-la-crt-en-2026-segun-el-ultimo-digito-del-numero/ | https://www.xataka.com.mx/telecomunicaciones/mexico-supero-100-millones-lineas-celulares-registradas-todavia-quedan-cuatro-fechas-limite-para-cerrar-ano | https://www.cronica.com.mx/nacional/2026/11/03/vinculacion-de-lineas-celulares-ya-supera-los-100-millones-gracias-a-la-participacion-ciudadana/ | https://es.euronews.com/2026/10/09/registro-telefonos-moviles-con-curp-que-pasa-con-whatsapp-redes-suspenden-linea | https://www.elimparcial.com/tecnologia/2026/08/06/la-crt-permite-recuperar-lineas-telefonicas-suspendidas-por-no-registrarlas-a-tiempo-si-el-tramite-se-realiza-dentro-de-los-90-dias-posteriores-a-la-suspension/"
+  },
+  {
+   "afirmacion": "Stack y cadencias: Claude Code en la nube con plan Max (o Pro «si el uso es bajo») alcanza para las tareas programadas del sistema: Centinela 7:07, Gabinete 7:10 y su barrido cada 2 horas, Pulso 7:50 y 18:40, Pauta y Enlace 8:00, Aduana 8:20, Bibliotecario 22:40, las de lunes y viernes y las que n8n despierta por API.",
+   "estado": "incorrecta",
+   "correccion": "Las tareas programadas (routines) tienen un tope diario de corridas iniciadas por cuenta: Pro 5, Max 15, Team/Enterprise 25 (están en research preview y puede cambiar; no se encontró el tope de Ultra). Las cadencias del diseño suman unas 13–14 corridas en un día normal y 17–19 los lunes y viernes, sin contar barridos cada hora (Repartidor, Cobra, Tijeras) ni las corridas que dispara n8n, que cuentan contra el mismo tope; además, cada corrida gasta del uso de la suscripción. Corrección: agrupar en 3–4 rondas al día (matutina 7:07 que haga en una sola sesión Centinela, Gabinete, Pulso, Pauta, Enlace y Aduana; vespertina 18:40; nocturna 22:40), mover los barridos y revisiones de estado a n8n (no necesitan IA) y despertar a Claude solo cuando haya algo que decidir, dejando 4 o 5 corridas libres para eventos. El plan Pro no alcanza ni para la Fase 1.",
+   "fuente": "https://www.implicator.ai/anthropic-ships-claude-code-routines-cloud-automations-that-run-without-your-mac.md | https://crackedpm-site.pages.dev/preflight/routines/r-08-usage-and-limits | https://code.claude.com/docs/en/routines"
+  },
+  {
+   "afirmacion": "Punto ciego #2: el paquete fiscal 2027 trae propuestas que cambian la cuenta (tope de RESICO y un esquema opcional de IVA); confirma con tu contadora qué quedó aprobado.",
+   "estado": "matizar",
+   "correccion": "Ya no son solo propuestas. Reforma a la Ley del ISR: Diputados la aprobó el 14 de octubre, el Senado la aprobó con cambios el 27 de octubre y Diputados avaló esos cambios a inicios de noviembre; sube el tope de RESICO de personas físicas de 3.5 a 5 millones de pesos al año (personas morales de 35 a 50 millones). Ley de Ingresos 2027 (aprobada sin cambios por el Senado el 27 de octubre): incluye la opción de pagar el IVA con una tasa de 7% sobre lo efectivamente cobrado, sin acreditar el IVA de tus gastos; al cliente se le sigue facturando 16%. Al 10 de noviembre no se encontró la publicación en el DOF; entrarían en vigor el 1 de enero de 2027. Cambia el primer paso: la simulación debe tener 4 escenarios (RESICO con IVA normal, RESICO con IVA de 7%, actividad empresarial y S.A.S.). El de 7% conviene si tienes poco IVA acreditable y puede salir más caro con mucha pauta, software y comisiones facturadas con IVA; pregunta a la contadora cómo y cuándo se elige la opción y cómo se combina con las retenciones de tus clientes empresa.",
+   "fuente": "https://www.tiempo.com.mx/nacional/diputados-aprueban-reforma-a-la-ley-isr-deducciones-resico-2027/ | https://www.razon.com.mx/mexico/2026/10/28/avala-senado-leyes-de-ingresos-y-de-derechos/ | https://forbes.com.mx/?p=1444139 | https://www.excelsior.com.mx/nacional/senado-aprueba-ley-ingresos-2027-preve-captar-mas-10-billones-pesos | https://idconline.mx/fiscal-contable/2026/10/21/resico-2027-te-conviene-el-nuevo-esquema-para-pagar-solo-el-7-de-iva | https://www.liderempresarial.com/aprueban-en-congreso-ley-de-isr-2027-que-modificaciones-hicieron-los-diputados-a-la-reforma/"
+  },
+  {
+   "afirmacion": "Punto ciego #0 y stack: desde octubre de 2026 Meta cobra más mensajes: marketing cerca de US$0.04 en México y servicio después de 1,000 gratis al mes por número.",
+   "estado": "matizar",
+   "correccion": "Desde el 1 de octubre de 2026 Meta cobra por mensaje los mensajes de servicio (respuestas libres dentro de la ventana de 24 horas) y las plantillas de utilidad dentro de esa ventana, que antes eran gratis. En México, según tablas de proveedores: servicio, utilidad y autenticación cerca de US$0.0085 y marketing cerca de US$0.0397. No se encontró confirmación de 1,000 mensajes de servicio gratis al mes (se parece a la regla anterior a noviembre de 2024): quítalo del cálculo. Lo que sí sigue gratis son las conversaciones que abre un anuncio de clic a WhatsApp (ventana de punto de entrada gratuito de 72 horas; algunos proveedores reportan hasta 7 días), así que conviene que la calificación y el primer seguimiento del setter ocurran dentro de esa ventana. Confirmar tarifas en tu cuenta de WhatsApp Business o con ManyChat.",
+   "fuente": "https://respond.io/blog/whatsapp-pricing-change-2026 | https://support.twilio.com/hc/en-us/articles/53100462475931-Notice-Changes-to-WhatsApp-s-Pricing-October-2026 | https://teramont.net/blog/whatsapp-business-platform-service-message-pricing-2026 | https://sleekflow.io/blog/whatsapp-business-price"
+  },
+  {
+   "afirmacion": "Punto ciego #0: desde el 15 de enero de 2026 la API de WhatsApp prohíbe los chatbots de IA «de propósito general»; un bot que atiende y vende tus servicios sí está permitido.",
+   "estado": "correcta",
+   "correccion": "Confirmado: aplicó a cuentas nuevas desde el 15 de octubre de 2025 y a todas desde el 15 de enero de 2026; salieron ChatGPT, Perplexity y similares. La prohibición aplica cuando la IA es el producto principal que se ofrece; un bot de atención, ventas o avisos de tu negocio está permitido. Regla práctica para el Anfitrión: que solo hable de tus servicios y no funcione como asistente general de preguntas libres.",
+   "fuente": "https://respond.io/blog/whatsapp-general-purpose-chatbots-ban | https://9to5mac.com/2025/10/20/whatsapp-bans-ai-chatbots-from-using-its-business-api/"
+  },
+  {
+   "afirmacion": "Punto ciego #10 y flujo 1: en los anuncios que abren WhatsApp o Instagram Direct, ManyChat manda LeadSubmitted a la Conversions API con una acción nativa cuando el prospecto pasa la calificación.",
+   "estado": "matizar",
+   "correccion": "La acción nativa de ManyChat («Send event to Meta Conversions API», en Ads Optimization) solo envía dos eventos, LeadSubmitted y Purchase, y su guía cubre anuncios de Instagram y Messenger. Para anuncios de clic a WhatsApp no se encontró confirmación de soporte nativo en ManyChat. Vía segura para WhatsApp: mandar el evento desde n8n a la Conversions API para mensajería de WhatsApp, que pide un dataset ligado a la cuenta de WhatsApp Business, la API en la nube y el ctwa_clid del primer mensaje (el diseño ya lo guarda). Antes de optimizar campañas a ese evento, comprueba en el Administrador de eventos que esté llegando.",
+   "fuente": "https://help.manychat.com/hc/en-us/articles/14580897414300-Conversions-API-CAPI-integration | https://community.manychat.com/general-q-a-43/ads-optimization-3661 | https://developers.facebook.com/documentation/ads-commerce/conversions-api/business-messaging | https://docs.zernio.com/ads/send-whatsapp-conversion"
+  },
+  {
+   "afirmacion": "Punto ciego #10 y Brújula: desde el 12 de enero de 2026 Meta dejó de reportar las ventanas de atribución de 7 y 28 días por visualización.",
+   "estado": "correcta",
+   "correccion": "Confirmado por el anuncio de Meta para desarrolladores: la API de Insights dejó de devolver 7 y 28 días por visualización; siguen 1, 7 y 28 días después del clic, 1 día de visualización y 1 día de visualización con interacción. Afecta lo que leen Brújula y Pauta, por eso tiene sentido guardar snapshots propios.",
+   "fuente": "https://developers.facebook.com/blog/post/2025/10/16/ads-insights-api-metric-availability-updates/ | https://ppc.land/meta-restricts-attribution-windows-and-data-retention-in-ads-insights-api/"
+  },
+  {
+   "afirmacion": "Riesgos, principios y punto ciego #11: las tareas programadas de Claude están en research preview, son de tu cuenta individual (no se comparten con el equipo y lo que hacen aparece como tú), no corren más de una vez por hora y arrancan con todos tus conectores con permiso de escritura.",
+   "estado": "correcta",
+   "correccion": "Confirmado: research preview; pertenecen a tu cuenta individual de claude.ai, no las ven tus compañeros y cuentan contra tu tope diario; lo que hacen aparece a tu nombre; todos tus conectores se incluyen por defecto y Claude puede usar sus herramientas de escritura sin pedir permiso durante la corrida; el intervalo mínimo es de una hora; y se pueden disparar por API, así que n8n sí puede despertarlas. Ojo: hay reportes abiertos de conectores de Google (Gmail, Calendar y Drive) que no aparecen al configurar rutinas en la nube; prueba el Gabinete con Google Calendar antes de depender de él.",
+   "fuente": "https://code.claude.com/docs/en/routines | https://code.claude.com/docs/en/web-scheduled-tasks | https://claudeissues.com/issue/87540-bug-bug-report-cloud-routines-cannot-attach-first-party-google-workspace-connect"
+  },
+  {
+   "afirmacion": "Punto ciego #5: desde el 21 de marzo de 2025 rige la nueva LFPDPPP, el INAI desapareció y la autoridad es la Secretaría Anticorrupción y Buen Gobierno; necesitas aviso integral en tu web y uno «corto» en el bot; las multas se fijan en UMAs y se duplican con datos sensibles.",
+   "estado": "matizar",
+   "correccion": "Fechas, autoridad y multas son correctas (de 100 a 320,000 UMA; pueden subir hasta el doble con datos sensibles). Dos ajustes: la ley nueva habla de aviso «simplificado», no «corto», así que en ManyChat, WhatsApp y Zoom usa un aviso simplificado con liga al integral; y, según IDC, la ley nueva ya no exige listar en el aviso las transferencias de datos, aunque informar con quién compartes (setters, ManyChat, Pipedrive, Meta y contadora) sigue siendo buena práctica y lo piden los clientes corporativos. La ley tuvo una reforma el 14 de noviembre de 2025.",
+   "fuente": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFPDPPP.pdf | https://idconline.mx/corporativo/2025/04/01/nueva-ley-de-proteccion-de-datos-cambios-en-derechos-y-obligaciones | https://www.legiscope.com/blog/lfpdppp-mexico-guia-cumplimiento.html"
+  },
+  {
+   "afirmacion": "Punto ciego #3: el artículo 285 de la Ley Federal del Trabajo considera trabajadores a vendedores e impulsores de ventas cuando su actividad es permanente; ponerle «comisión mercantil» al contrato no basta.",
+   "estado": "correcta",
+   "correccion": "Texto confirmado. Matiz útil para el contrato: el mismo artículo exceptúa a quien no ejecuta personalmente el trabajo o solo interviene en operaciones aisladas, y lo que decide es si hay subordinación. Para comisionistas, la Suprema Corte ha resuelto que la indemnización se calcula con el salario del artículo 289 (promedio de lo ganado en el último año).",
+   "fuente": "https://mley.mx/LFT/articulo/285/ | https://mexico.justia.com/federales/leyes/ley-federal-del-trabajo/titulo-sexto/capitulo-ix/ | https://scjn.gob.mx/sites/default/files/sinopsis_asuntos_destacados/documento/2016-11/2S-230211-JFFGS-443_0.pdf"
+  },
+  {
+   "afirmacion": "Punto ciego #6: la Ley Federal del Derecho de Autor presume que en una obra por encargo los derechos patrimoniales son de quien la encarga y paga, salvo pacto en contrario (art. 83).",
+   "estado": "correcta",
+   "correccion": "Texto confirmado; el artículo 83 bis pide que el contrato sea claro y, en caso de duda, se interpreta a favor del autor: otra razón para la cláusula de herramientas preexistentes. Agregar: en el Amparo Directo 6/2025 la Suprema Corte resolvió que solo una persona física puede ser autora y que una obra generada solo por IA no se protege; lo que tus agentes generen sin aporte humano demostrable puede no ser una obra que puedas ceder o defender, así que el contrato debe apoyarse también en licencia y confidencialidad.",
+   "fuente": "https://mley.mx/LFDA/articulo/83/ | https://mley.mx/LFDA/articulo/83-bis/ | https://www.scjn.gob.mx/sites/default/files/listas/documento_dos/2025-06/AD%206-2025.pdf | https://expansion.mx/tecnologia/2025/07/16/obras-hechas-con-ia-no-tienen-derecho-de-autor-scjn"
+  },
+  {
+   "afirmacion": "Punto ciego #2: en RESICO de persona física pagas de 1% a 2.5% sobre lo cobrado sin restar gastos, con tope de 3.5 millones de pesos al año en 2026.",
+   "estado": "correcta",
+   "correccion": "Correcto para 2026. Para 2027 el tope sube a 5 millones si se publica la reforma ya aprobada por el Congreso (ver la verificación del paquete 2027).",
+   "fuente": "https://www.satfacil.com.mx/blog/limite-resico-3-5-millones-que-hacer | https://www.pluxee.mx/blog/resico-que-es-quien-aplica-y-como-funciona/ | https://www.pwc.com/mx/es/archivo/2026/paquete-economico-mx-2027.pdf"
+  },
+  {
+   "afirmacion": "Punto ciego #4: para deducir comisiones necesitas el CFDI del setter y pagar por transferencia si el pago pasa de $2,000.",
+   "estado": "correcta",
+   "correccion": "Confirmado (LISR art. 27, fracción III): arriba de $2,000 se paga con transferencia, cheque nominativo, tarjeta o monedero autorizado, y con CFDI. Se mide por erogación, no por pago: partirlo en pagos chicos no lo vuelve deducible, y pagar mal también hace perder el IVA acreditable.",
+   "fuente": "https://sdv.com.mx/compendio/ley-isr/articulo-27/ | https://idconline.mx/fiscal-contable/2024/07/22/pagos-en-efectivo-son-deducibles-para-impuestos"
+  },
+  {
+   "afirmacion": "Stack: Notion Plus aprox. US$10–12 por miembro al mes (Business aprox. US$20–24), los invitados no ocupan asiento, y los Custom Agents de Notion son una opción de Fase 3 que consume créditos.",
+   "estado": "matizar",
+   "correccion": "Precios correctos (Plus US$10 en pago anual o US$12 mensual; Business US$20 o US$24) y los invitados no cuentan como asiento. Matiz: Notion AI completo viene en Business (en Plus es una prueba limitada), y desde el 4 de mayo de 2026 los Custom Agents consumen créditos de Notion a US$10 por cada 1,000, que solo se compran en Business o Enterprise. Con el plan Plus recomendado no hay Custom Agents: si la Fase 3 los contempla, presupuesta el cambio a Business.",
+   "fuente": "https://www.notion.com/help/custom-agent-pricing | https://www.notion.com/blog/introducing-custom-agents | https://dupple.com/pricing/notion"
+  },
+  {
+   "afirmacion": "Stack: Claude Max cuesta aprox. US$100 al mes (Pro US$20; Ultra US$200).",
+   "estado": "correcta",
+   "correccion": "Confirmado: entre fines de octubre e inicios de noviembre de 2026 Anthropic renombró Max 5x a «Max» (US$100) y Max 20x a «Ultra» (US$200) sin cambiar precios; Max y Ultra son solo de pago mensual y, según fuentes secundarias, incluyen créditos mensuales de API. Confirmar en claude.com/pricing.",
+   "fuente": "https://www.usagepricing.com/blueprint/activity/anthropic-2026-11-02-max-20x-becomes-ultra | https://www.buildmvpfast.com/blog/claude-max-plan-changes-ultra-5-hour-limit-2026 | https://sessionwatcher.com/news/claude-ultra-200-month-max-100-pricing-page"
+  },
+  {
+   "afirmacion": "Stack: API de Claude por uso: Haiku 5.5 US$0.10/0.50 y Sonnet 5.5 US$2/10 por millón de tokens de entrada/salida; Batch API con 50% de descuento.",
+   "estado": "correcta",
+   "correccion": "Correcto. Precisión: el precio de Haiku 5.5 aplica a prompts de hasta 100K tokens (arriba de eso, US$0.50/2.50 por millón). En Sonnet 5.5 las lecturas de caché cuestan US$0.10 por millón.",
+   "fuente": "https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  {
+   "afirmacion": "Orquestación: Remote Control se usa solo cuando la tarea necesita tu computadora, porque exige tu máquina encendida; lo que atiende a clientes vive en sesiones en la nube que diriges desde el celular.",
+   "estado": "correcta",
+   "correccion": "Confirmado: Remote Control corre como proceso local; si cierras la terminal o la máquina se suspende, la sesión termina. Requiere Claude Code 2.1.51 o posterior y admite una sesión remota por instancia.",
+   "fuente": "https://code.claude.com/docs/en/remote-control | https://devops.com/claude-code-remote-control-keeps-your-agent-local-and-puts-it-in-your-pocket/"
+  },
+  {
+   "afirmacion": "Punto ciego #8 y stack: Stripe México cobra 3.6% + $3 MXN más IVA por cobro con tarjeta nacional.",
+   "estado": "correcta",
+   "correccion": "Confirmado en la página de precios de Stripe México: las comisiones no incluyen IVA y se les suma 16%. Las tarjetas internacionales llevan 0.5% adicional; el costo de meses sin intereses revísalo aparte en tu panel.",
+   "fuente": "https://stripe.com/en-mx/pricing | https://support.stripe.com/questions/taxes-on-stripe-fees-for-mexico-based-businesses"
+  },
+  {
+   "afirmacion": "Stack: Mercado Pago Link de pago cobra 3.49% + $4 con dinero al instante.",
+   "estado": "correcta",
+   "correccion": "Confirmado en la página oficial, más IVA. Si esperas el dinero, baja: 3.19% a 7 días y 2.95% a 30 días (más $4 e IVA). Los meses sin intereses cuestan aparte.",
+   "fuente": "https://www.mercadopago.com.mx/herramientas-para-vender/link-de-pago | https://calcforlife.com/es/calculadora-mercado-pago-comisiones/"
+  },
+  {
+   "afirmacion": "Stack: ManyChat Pro aprox. US$29 al mes en pago anual o US$39 mensual (2,500 contactos activos; US$0.05 por contacto extra).",
+   "estado": "correcta",
+   "correccion": "Coincide con varias guías de 2026: ManyChat cambió sus planes el 2 de marzo de 2026 (Free, Essential, Pro y Business) y Pro incluye 2,500 contactos activos. El contacto extra cuesta cerca de US$0.05 en pago mensual y cerca de US$0.038 en anual. Las cuentas con plan anterior (legacy) pueden tener otras condiciones.",
+   "fuente": "https://www.activepieces.com/blog/manychat-pricing-2026-plans-and-contact-tier-costs | https://www.eesel.ai/blog/manychat-pricing"
+  },
+  {
+   "afirmacion": "Stack y Ventas: Pipedrive Growth o superior, con asignación round-robin en Premium.",
+   "estado": "matizar",
+   "correccion": "Los planes actuales son Lite, Growth, Premium y Ultimate (renombrados en 2025), con precio por asiento en pago anual cerca de US$14, US$39, US$49–59 y US$79 (las fuentes discrepan en Premium). La asignación automática estaba en Professional, que hoy equivale a Premium; pero el reparto por turnos asigna a un «equipo» y requiere la función Teams, que solo está en ciertos planes. Confírmalo en pipedrive.com/pricing antes de construir el Repartidor; si Premium no la trae, haz la rotación en n8n. Cada setter ocupa un asiento.",
+   "fuente": "https://support.pipedrive.com/en/article/automatic-assignment | https://www.activepieces.com/blog/pipedrive-pricing-plans-and-total-costs-for-2026"
+  },
+  {
+   "afirmacion": "Stack: n8n Cloud Starter aprox. €20 al mes en pago anual o €24 mensual, con 2,500 ejecuciones.",
+   "estado": "correcta",
+   "correccion": "Coincide con varias fuentes de 2026 (incluye 5 ejecuciones simultáneas); Pro cuesta cerca de €50 en pago anual o €60 mensual con 10,000 ejecuciones. Confirmar en n8n.io/pricing.",
+   "fuente": "https://www.jetadmin.io/blog/n8n-pricing/ | https://dupple.com/learn/n8n-pricing"
+  },
+  {
+   "afirmacion": "Riesgos: la API de Notion tiene límites de alrededor de 3 solicitudes por segundo y 100 filas por consulta.",
+   "estado": "correcta",
+   "correccion": "Confirmado en la documentación: promedio de 3 solicitudes por segundo por integración, con ráfagas permitidas y error 429 al pasarse; las consultas devuelven máximo 100 resultados por página. Notion advierte que puede cambiar los límites por plan. El historial de 30 días en Plus no se reverificó.",
+   "fuente": "https://developers.notion.com/reference/request-limits | https://developers.notion.com/reference/rate-limits"
+  },
+  {
+   "afirmacion": "Punto ciego #1 y stack: Bitwarden Premium cuesta US$19.80 al año (aprox. US$1.65 al mes).",
+   "estado": "correcta",
+   "correccion": "Confirmado: subió en enero de 2026 desde US$10 al año, con más funciones de seguridad. El acceso de emergencia es función de Premium.",
+   "fuente": "https://alternativeto.net/news/2026/1/bitwarden-enhances-premium-and-families-plans-with-more-security-features-and-raises-prices | https://pricingsaas.com/companies/bitwarden/diffs/2026Q1"
+  },
+  {
+   "afirmacion": "Stack: Blotato Starter aprox. US$29 al mes.",
+   "estado": "correcta",
+   "correccion": "Confirmado en la página de precios de Blotato: Starter US$29 al mes con 20 cuentas conectadas y 1,250 créditos de IA; el siguiente plan (Creator) cuesta US$97.",
+   "fuente": "https://www.blotato.com/pricing.md"
+  },
+  {
+   "afirmacion": "Stack y capa de automatización: GitHub Free da 2,000 minutos de Actions en repos privados, un repo privado en Free no tiene escaneo de secretos y Secret Protection cuesta aprox. US$19 por committer activo.",
+   "estado": "correcta",
+   "correccion": "Los 2,000 minutos al mes de GitHub Free están en la documentación oficial; el precio de Secret Protection (US$19 por committer activo al mes) solo se confirmó en un agregador. Mantener gitleaks en cada PR es la opción sin costo.",
+   "fuente": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans | https://toolradar.com/tools/github/pricing"
+  },
+  {
+   "afirmacion": "Stack: Vercel Pro aprox. US$20 por usuario al mes; el plan Hobby no permite uso comercial.",
+   "estado": "correcta",
+   "correccion": "Confirmado: Hobby es solo para uso personal no comercial, y Vercel considera comercial incluso un despliegue hecho por un consultor pagado para un cliente; las entregas a clientes van en Pro o en la cuenta del cliente.",
+   "fuente": "https://vercel.com/docs/plans/hobby | https://schematichq.com/blog/vercel-pricing"
+  },
+  {
+   "afirmacion": "Punto ciego #13: en el estudio publicado en Harvard Business Review en 2011, las empresas que intentaron contactar en la primera hora tuvieron casi 7 veces más probabilidad de calificar al prospecto.",
+   "estado": "correcta",
+   "correccion": "Confirmado (Oldroyd, McElheran y Elkington, HBR 2011). No atribuirle las cifras de «21 veces» o «100 veces» en 5 minutos que circulan en internet: vienen de otro estudio de 2007.",
+   "fuente": "https://scholarsarchive.byu.edu/facpub/9711 | https://ainora.lt/blog/lead-response-time-statistics-every-study-2026"
+  },
+  {
+   "afirmacion": "Stack: la alternativa «App WhatsApp Business» sirve solo 1 a 1, sin envíos masivos.",
+   "estado": "matizar",
+   "correccion": "La app sí tiene listas de difusión de hasta 256 contactos, pero solo llegan a quien guardó tu número, y en algunos países ofrece mensajes de marketing pagados. Lo que no tiene es automatización, varios agentes ni plantillas por API; para referidos en volumen y con medición, la API vía ManyChat sigue siendo la opción correcta.",
+   "fuente": "https://sendpulse.com/blog/whatsapp-broadcast-lists | https://www.wati.io/blog/whatsapp-broadcast-guide"
+  }
+ ],
+ "revision_sesgo": [
+  "Puntos ciegos: sin sesgo hacia lo que ya sabe; 15 de 16 están fuera de su dominio y ninguno se apoya en las señales débiles (capacitaciones o comunidad).",
+  "El sesgo está en las soluciones, no en los huecos: casi todo hueco no técnico se resuelve con un agente, una base o un campo nuevo. Sirve para registrar, pero en lo legal, fiscal y laboral el paso que cambia el resultado es humano (abogado, contadora, entrevistas a clientes) y debe ir primero; en #4, #13 y #14 el primer paso arranca por herramientas.",
+  "El error de dato más grande apareció en su propio terreno: el diseño asume decenas de tareas programadas al día y el tope de Max es 15 corridas. Lo «conocido» también necesita verificación.",
+  "La Fase 0 mezcla trámites con fecha (líneas CURP al 15 de noviembre, contratos, régimen fiscal) con construcción técnica (8 CLAUDE.md, skills, Gabinete y Escriba). Para que la ingeniería no se coma la semana: medir la Fase 0 por trámites cerrados y dejar solo 2 tareas programadas.",
+  "Faltan huecos valiosos de dominio desconocido: alta de proveedor y plazos de pago de empresas grandes, registro de marca (hoy en Fase 3), seguro de responsabilidad profesional y la propiedad de lo generado por IA tras la sentencia de la Suprema Corte de 2025. Van en reemplazos_sugeridos.",
+  "#12 (conocido) repite reglas que ya están en principios, orquestación y riesgos; si hace falta un lugar, es el primero que puede salir sin perder cobertura."
+ ],
+ "nota_metodo": "Verificado con WebSearch el 10 de noviembre de 2026. WebFetch no pudo abrir www.ycloud.com ni developers.facebook.com porque esos dominios no están permitidos en la red de esta sesión (para leer directo las tarifas oficiales de Meta hay que permitirlos en la configuración de red). Varias cifras de precios vienen de fuentes secundarias que coinciden entre sí; cada corrección lo indica cuando es así. El conteo de corridas diarias de tareas programadas sale de sumar las cadencias del propio diseño."
+}

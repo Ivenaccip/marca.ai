@@ -35,9 +35,11 @@ AUTON = {
     'automatico': ('auto', 'Automático'),
     'borrador_con_aprobacion': ('draft', 'Borrador + tu aprobación'),
     'asistido': ('assist', 'Asistido (lo opera una persona)'),
+    'manual_con_plantilla': ('manual', 'A mano con plantilla (aún no es agente)'),
 }
 def auton_key(a):
     a = (a or '').lower()
+    if 'manual' in a or 'plantilla' in a: return 'manual_con_plantilla'
     if 'borr' in a or 'aprob' in a: return 'borrador_con_aprobacion'
     if 'asist' in a: return 'asistido'
     if 'auto' in a: return 'automatico'
@@ -71,6 +73,8 @@ def glyph(cx, cy, key, r=5.5):
     if k == 'draft':
         return (f'<circle cx="{cx}" cy="{cy}" r="{r}" class="g-ring"/>'
                 f'<path d="M{cx} {cy - r} A{r} {r} 0 0 1 {cx} {cy + r} Z" class="g-fill"/>')
+    if k == 'manual':
+        return f'<circle cx="{cx}" cy="{cy}" r="{r}" class="g-ring g-dash"/>'
     return f'<circle cx="{cx}" cy="{cy}" r="{r}" class="g-ring"/>'
 
 def chips_layout(items, x0, x1, y0, ch=26, gap=8, cw=7.2, pad=11):
@@ -90,31 +94,43 @@ def rect_exit(cx, cy, hw, hh, ux, uy):
     return cx + ux * t, cy + uy * t
 
 # ---------------- MAPA GENERAL ----------------
-def svg_map(F, pillars, layer_pillars, people):
+def chat_of(p):
+    m = re.search(r'«([^»]+)»', p.get('chat', '') or '')
+    return m.group(1) if m else ''
+
+def svg_map(F, pillars, layer_pillars, people, T=None):
+    T = T or {}
+    fase1 = set(T.get('chats_fase1', []))
     W = 1280; M = 32
     o = []
     # Fila 1: Tú · Jefe de gabinete · Equipo humano
     y1, h1 = 28, 88
-    o.append(f'<rect x="{M}" y="{y1}" width="250" height="{h1}" rx="14" class="box-ceo"/>')
+    tw = 226
+    o.append(f'<rect x="{M}" y="{y1}" width="{tw}" height="{h1}" rx="14" class="box-ceo"/>')
     o.append(svg_text(M + 20, y1 + 36, 'Tú', 't-title t-on-ceo')[0])
-    o.append(svg_text(M + 20, y1 + 58, 'CEO y cara de la marca: grabas, decides y apruebas', 't-sub t-on-ceo', lh=16, max_chars=34)[0])
-    jx, jw = 362, 390
+    o.append(svg_text(M + 20, y1 + 58, 'CEO y cara de la marca: grabas, decides y apruebas', 't-sub t-on-ceo', lh=16, max_chars=30)[0])
+    jx, jw = 350, 400
     o.append(f'<rect x="{jx}" y="{y1}" width="{jw}" height="{h1}" rx="14" class="box"/>')
     o.append(svg_text(jx + 20, y1 + 36, 'Jefe de gabinete', 't-title')[0])
     o.append(f'<rect x="{jx + jw - 78}" y="{y1 + 18}" width="60" height="20" rx="10" class="badge-new"/>')
     o.append(svg_text(jx + jw - 48, y1 + 32, 'NUEVO', 't-badge', anchor='middle')[0])
-    o.append(svg_text(jx + 20, y1 + 58, 'Agente que lee el cerebro y arma tu plan del día, la revisión semanal y las alertas', 't-sub', lh=16, max_chars=52)[0])
+    o.append(svg_text(jx + 20, y1 + 58, T.get('gab_sub', 'Agente que lee el cerebro y arma tu plan del día, la revisión semanal y las alertas'), 't-sub', lh=16, max_chars=52, max_lines=2)[0])
     # flecha Tú <-> Jefe
-    o.append(f'<line x1="{M + 254}" y1="{y1 + 44}" x2="{jx - 4}" y2="{y1 + 44}" class="edge" marker-end="url(#arr)" marker-start="url(#arr-s)"/>')
-    o.append(svg_text((M + 250 + jx) / 2, y1 + 34, 'prioridades', 't-edge', anchor='middle')[0])
-    o.append(svg_text((M + 250 + jx) / 2, y1 + 64, 'aprobaciones', 't-edge', anchor='middle')[0])
+    o.append(f'<line x1="{M + tw + 4}" y1="{y1 + 44}" x2="{jx - 4}" y2="{y1 + 44}" class="edge" marker-end="url(#arr)" marker-start="url(#arr-s)"/>')
+    o.append(svg_text((M + tw + jx) / 2, y1 + 34, 'prioridades', 't-edge', anchor='middle')[0])
+    o.append(svg_text((M + tw + jx) / 2, y1 + 64, 'aprobaciones', 't-edge', anchor='middle')[0])
     # Equipo humano
-    ex = 832; ew = W - M - ex
-    o.append(f'<rect x="{ex}" y="{y1}" width="{ew}" height="{h1}" rx="14" class="box box-dashed"/>')
+    ex = jx + jw + 30; ew = W - M - ex
+    max_rows_team = 3
+    eh = 44 + max_rows_team * 30 + 4
+    cl = []
+    for k in range(len(people), 0, -1):
+        labs = people[:k] + ([f'+{len(people) - k} más'] if k < len(people) else [])
+        cl, _ = chips_layout(labs, ex + 20, ex + ew - 16, y1 + 44, ch=24, gap=6, cw=6.6, pad=9)
+        if all(y + 24 <= y1 + 44 + max_rows_team * 30 for (x, y, w, t) in cl): break
+    o.append(f'<rect x="{ex}" y="{y1}" width="{ew}" height="{eh}" rx="14" class="box box-dashed"/>')
     o.append(svg_text(ex + 20, y1 + 30, 'Equipo humano', 't-title-s')[0])
-    cl, _ = chips_layout(people[:7], ex + 20, ex + ew - 16, y1 + 44, ch=24, gap=6, cw=6.6, pad=9)
     for (x, y, w, t) in cl:
-        if y + 24 > y1 + h1 - 4: break
         o.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="24" rx="12" class="chip"/>')
         o.append(f'<text x="{x + w / 2:.1f}" y="{y + 16:.1f}" class="t-chip-s" text-anchor="middle">{esc(t)}</text>')
 
@@ -122,7 +138,10 @@ def svg_map(F, pillars, layer_pillars, people):
     N = len(pillars)
     gx = 12
     cw = (W - 2 * M - gx * (N - 1)) / N
-    top = 196
+    bus_y = y1 + eh + 16
+    band_y = bus_y + 30
+    band_h = 40
+    top = band_y + band_h + 16
     name_chars = max(10, int((cw - 26) / (15 * 0.6)))
     ag_chars = max(10, int((cw - 44) / 7.2))
     # alto de tarjeta: nombre (1-2 líneas) + dueño + agentes
@@ -139,26 +158,41 @@ def svg_map(F, pillars, layer_pillars, people):
     # bus
     jcx = jx + jw / 2
     xs = [M + i * (cw + gx) + cw / 2 for i in range(N)]
-    o.append(f'<line x1="{jcx}" y1="{y1 + h1}" x2="{jcx}" y2="{150}" class="edge"/>')
-    o.append(f'<line x1="{xs[0]:.1f}" y1="150" x2="{xs[-1]:.1f}" y2="150" class="edge"/>')
-    o.append(svg_text(jcx + 10, 140, 'plan del día · tareas por pilar', 't-edge')[0])
-    for x in xs:
-        o.append(f'<line x1="{x:.1f}" y1="150" x2="{x:.1f}" y2="{top - 4}" class="edge" marker-end="url(#arr)"/>')
-    # etiquetas de cadena de valor (sobre la primera columna de cada grupo)
-    seen = set()
+    # grupos: pilares consecutivos que viven en el mismo chat
+    groups = []
     for i, p in enumerate(pillars):
-        c = CLUSTER[p['_slot']]
-        if c in seen: continue
-        seen.add(c)
-        o.append(svg_text(M + i * (cw + gx), top - 12, c.upper(), 't-cluster')[0])
+        c = chat_of(p) or p['nombre']
+        if groups and groups[-1]['chat'] == c:
+            groups[-1]['idx'].append(i)
+        else:
+            groups.append({'chat': c, 'idx': [i], 'cluster': CLUSTER[p['_slot']]})
+    gcs = []
+    for g in groups:
+        gx0 = M + g['idx'][0] * (cw + gx)
+        gx1 = M + g['idx'][-1] * (cw + gx) + cw
+        g['x0'], g['x1'] = gx0, gx1
+        gcs.append((gx0 + gx1) / 2)
+    o.append(f'<line x1="{jcx}" y1="{y1 + h1}" x2="{jcx}" y2="{bus_y}" class="edge"/>')
+    o.append(f'<line x1="{min(gcs[0], jcx):.1f}" y1="{bus_y}" x2="{max(gcs[-1], jcx):.1f}" y2="{bus_y}" class="edge"/>')
+    o.append(svg_text(jcx + 10, bus_y - 10, T.get('bus_label', 'plan del día · tareas por chat'), 't-edge')[0])
+    for gcx in gcs:
+        o.append(f'<line x1="{gcx:.1f}" y1="{bus_y}" x2="{gcx:.1f}" y2="{band_y - 4}" class="edge" marker-end="url(#arr)"/>')
+    for g in groups:
+        gw = g['x1'] - g['x0']
+        o.append(f'<rect x="{g["x0"]:.1f}" y="{band_y}" width="{gw:.1f}" height="{band_h}" rx="10" class="box chat-band"/>')
+        o.append(svg_text(g['x0'] + 12, band_y + 15, g['cluster'].upper(), 't-cluster')[0])
+        o.append(svg_text(g['x0'] + 12, band_y + 32, 'Chat «' + g['chat'] + '»', 't-chat', max_chars=int((gw - 24) / 7.4), max_lines=1)[0])
+        if g['chat'] in fase1:
+            o.append(f'<rect x="{g["x1"] - 62:.1f}" y="{band_y + 5}" width="52" height="16" rx="8" class="badge-human"/>')
+            o.append(svg_text(g['x1'] - 36, band_y + 16.5, 'FASE 1', 't-badge-h', anchor='middle')[0])
     for i, p in enumerate(pillars):
         x = M + i * (cw + gx)
         o.append(f'<a href="#p-{esc(p["_anchor"])}" class="card-link"><title>Ver detalle de {esc(p["nombre"])}</title>')
         o.append(f'<rect x="{x:.1f}" y="{top}" width="{cw:.1f}" height="{ch:.1f}" rx="12" class="box card"/>')
         o.append(f'<path d="M{x:.1f} {top + 12} A12 12 0 0 1 {x + 12:.1f} {top} H{x + cw - 12:.1f} A12 12 0 0 1 {x + cw:.1f} {top + 12} V{top + 7} H{x:.1f} Z" class="pc-{p["_slot"]}"/>')
-        t, nl = svg_text(x + 13, top + 32, p['nombre'], 't-pillar', lh=19, max_chars=name_chars, max_lines=2)
+        t, nl = svg_text(x + 13, top + 32, p['nombre'], 't-pillar', lh=19, max_chars=name_chars, max_lines=3)
         o.append(t)
-        yy = top + 32 + (nl - 1) * 19 + 20
+        yy = top + 32 + (max_nl - 1) * 19 + 20
         owner = p.get('dueno_humano') or ''
         if owner:
             o.append(svg_text(x + 13, yy, 'dueño: ' + owner, 't-owner', lh=14, max_chars=owner_chars, max_lines=2)[0])
@@ -169,7 +203,7 @@ def svg_map(F, pillars, layer_pillars, people):
         for a in p['agentes'][:6]:
             k = auton_key(a.get('autonomia'))
             o.append(glyph(x + 19, ya - 4, k))
-            t, n = svg_text(x + 32, ya, a['nombre'], 't-agent', lh=15, max_chars=ag_chars, max_lines=2)
+            t, n = svg_text(x + 32, ya, a['nombre'], 't-agent t-agent-m' if k == 'manual_con_plantilla' else 't-agent', lh=15, max_chars=ag_chars, max_lines=2)
             o.append(t)
             ya += n * 17 + 7
         o.append('</a>')
@@ -191,10 +225,12 @@ def svg_map(F, pillars, layer_pillars, people):
         o.append(f'<text x="{x + w / 2:.1f}" y="{by + 18 + y + 17:.1f}" class="t-chip" text-anchor="middle">{esc(t)}</text>')
     # Tuberías
     ty = by + bh + 46
-    comps = [c['nombre'] for c in F['capa_automatizacion']]
+    comps = [T.get('rename', {}).get(c['nombre'], c['nombre']) for c in F['capa_automatizacion']]
     for lp in layer_pillars:
         for a in lp['agentes'][:4]:
-            if a['nombre'] not in comps: comps.append(a['nombre'])
+            an = a['nombre'].lower()
+            if 'gabinete' in an: continue
+            if not any(re.search(r'\b' + re.escape(an) + r'\b', c.lower()) for c in comps): comps.append(a['nombre'])
     cl, chh = chips_layout(comps, M + 270, W - M - 18, 0, ch=26, gap=8)
     th = max(86, chh + 36)
     mid = W / 2
@@ -202,7 +238,10 @@ def svg_map(F, pillars, layer_pillars, people):
     o.append(svg_text(mid + 12, by + bh + 28, 'eventos · webhooks · tareas programadas', 't-edge')[0])
     o.append(f'<rect x="{M}" y="{ty}" width="{W - 2 * M}" height="{th}" rx="16" class="box box-pipes"/>')
     o.append(svg_text(M + 22, ty + 36, 'Tuberías', 't-title')[0])
-    o.append(svg_text(M + 22, ty + 58, 'Automatización + sesiones en la nube con Remote Control', 't-sub', lh=16, max_chars=36, max_lines=2)[0])
+    o.append(svg_text(M + 22, ty + 58, T.get('pipes_sub', 'Automatización + sesiones en la nube con Remote Control'), 't-sub', lh=16, max_chars=36, max_lines=7)[0])
+    if T.get('pipes_fase1'):
+        o.append(f'<rect x="{M + 122}" y="{ty + 22}" width="52" height="16" rx="8" class="badge-human"/>')
+        o.append(svg_text(M + 148, ty + 33.5, 'FASE 1', 't-badge-h', anchor='middle')[0])
     for (x, y, w, t) in cl:
         o.append(f'<rect x="{x:.1f}" y="{ty + 18 + y:.1f}" width="{w:.1f}" height="26" rx="13" class="chip"/>')
         o.append(f'<text x="{x + w / 2:.1f}" y="{ty + 18 + y + 17:.1f}" class="t-chip" text-anchor="middle">{esc(t)}</text>')
@@ -212,7 +251,7 @@ def svg_map(F, pillars, layer_pillars, people):
     for s in F['stack_recomendado']:
         t = re.split(r'[(/,+]| o ', s['herramienta'])[0].strip()
         if t and t not in tools and len(t) <= 26: tools.append(t)
-    tools = tools[:16]
+    tools = T.get('tools') or tools[:16]
     cl, chh = chips_layout(tools, M + 270, W - M - 18, 0, ch=26, gap=8)
     hh = max(70, chh + 30)
     o.append(f'<line x1="{mid}" y1="{ty + th + 4}" x2="{mid}" y2="{hy - 4}" class="edge" marker-end="url(#arr)" marker-start="url(#arr-s)"/>')

@@ -2,62 +2,161 @@
  "title": "Mapa del sistema marca.ai",
  "eyebrow": "marca.ai · mapa del sistema · 10 de noviembre de 2026",
  "h1": "Tu marca personal, operada como un sistema",
- "map_lede": "Léelo de arriba abajo. Tú decides y apruebas; el jefe de gabinete reparte el trabajo; cada pilar es un chat con sus agentes; todos leen y escriben en Notion; las tuberías mueven los datos entre tus herramientas.",
- "map_caption": "Cada tarjeta es un chat (un proyecto de Claude) con sus agentes. El círculo junto a cada agente indica cuánta libertad tiene. Toca un pilar para ir a su detalle.",
- "cycle_lede": "El mismo cliente pasa por todos los pilares. Si un traspaso falla (un lead que nadie toma, una venta que no genera factura, un proyecto que no se vuelve caso de éxito) el ciclo se rompe y lo pagas en pauta.",
+ "map_lede": "Léelo de arriba abajo. Tú decides y apruebas; el jefe de gabinete te arma el día; cada pilar es un área con dueño y vive en uno de máximo 5 chats; todos leen y escriben en Notion; las tuberías (n8n y las rutinas de Claude) mueven los datos entre tus herramientas.",
+ "map_caption": "Cada tarjeta es un pilar (un área con dueño) y la banda de arriba dice en qué chat vive. En Fase 1 solo existen los chats marcados FASE 1; los demás se abren cuando su pilar tenga trabajo cada semana. El círculo junto a cada agente indica cuánta libertad tiene; los punteados todavía son plantillas que se hacen a mano. Toca un pilar para ir a su detalle.",
+ "cycle_lede": "El mismo cliente pasa por todos los pilares. Si un traspaso falla (un lead que nadie toma, un pago que no se registra, un proyecto que no se vuelve caso de éxito) el ciclo se rompe y lo pagas en pauta. El evento «Pago recibido» es la bisagra: antes manda Pipedrive, después manda Notion.",
  "cycle_caption": "Las etiquetas TÚ y HUMANO marcan dónde decide una persona; lo demás lo preparan agentes. La flecha bermellón cierra el ciclo: el referido arranca la siguiente vuelta.",
- "pillars_lede": "Cada pilar tiene un dueño humano, sus agentes y los datos que deja en Notion. Los marcados NUEVO no estaban en tu lista.",
- "orq_caption": "Ningún agente le habla a un cliente, gasta dinero ni toca impuestos sin pasar por tu aprobación. El trabajo se pasa por Notion, no por la memoria de un chat.",
- "brain_lede": "Una base por cada cosa del mundo real (persona, oportunidad, proyecto, pieza, cobro). Agentes y equipo escriben en el mismo lugar; los tableros solo filtran.",
+ "pillars_lede": "Cada pilar tiene un dueño humano, sus agentes y los datos que deja en Notion. Cada agente dice cuándo se enciende: primero se hace a mano 5–10 veces con plantilla y después se automatiza. Los marcados NUEVO no estaban en tu lista.",
+ "orq_caption": "Nada que gaste dinero, contacte por primera vez, publique, toque impuestos, cambie precios o dé accesos se ejecuta sin una aprobación registrada. Lo que coincide con algo ya aprobado no se vuelve a aprobar.",
+ "brain_lede": "Diez bases para arrancar, una por cada cosa del mundo real (tarea, cliente, proyecto, cobro, pieza, persona). Notion guarda todo lo que pasa después del pago; Pipedrive, lo de antes; ManyChat, las conversaciones y los permisos.",
  "gaps_lede": "Lo que no mencionaste y te va a costar dinero, clientes o problemas legales si no lo resuelves. Siguiendo tu regla 90/10, casi todo está fuera de tu terreno técnico.",
- "road_lede": "Primero a mano y documentado, después automatizado. Cada fase termina con un criterio que se puede comprobar.",
- "rhythm_lede": "Los rituales que mantienen vivo el sistema: los agentes preparan, las personas deciden.",
+ "road_lede": "Primero a mano y documentado, después automatizado. La Fase 0 no tiene agentes: solo lo que tiene fecha o protege dinero. Cada fase termina con un criterio que se puede comprobar.",
+ "rhythm_lede": "Tu presupuesto es de 5 horas de gestión a la semana: los agentes preparan y tú decides en ventanas cortas.",
  "stack_lede": "Una herramienta por función. Los costos son aproximados: confírmalos antes de contratar.",
- "q_lede": "Con estas respuestas afino el sistema y empiezo a construirlo.",
+ "q_lede": "Con estas respuestas afino el sistema. La primera define casi todo lo demás.",
  "src_lede": "Los datos que cambian seguido (políticas, leyes, precios, APIs) se revisaron con búsqueda web el 10 de noviembre de 2026. Esto no sustituye la opinión de tu contadora ni de un abogado.",
- "footer": "Hecho a partir de 13 investigaciones independientes (6 pilares y 7 lentes expertas), una síntesis y dos revisiones críticas. La fuente vive en el repositorio marca.ai.",
+ "footer": "Hecho a partir de 13 investigaciones independientes (6 pilares y 7 lentes expertas), una síntesis, una crítica de completitud y una verificación de datos con búsqueda web. La fuente vive en el repositorio marca.ai.",
  "orq_nodes": [
   [
-   "Jefe de gabinete",
-   "a las 8:00 lee el cerebro y crea las tareas del día",
+   "Gabinete · 7:10",
+   "lee Notion, Pipedrive y tu agenda; te manda un mensaje",
    ""
   ],
   [
    "Notion · Tareas",
-   "cada tarea con pilar, responsable, fecha y contexto",
+   "cada tarea con pilar, responsable y fecha",
    "box-brain"
   ],
   [
    "Chat del pilar",
-   "su agente toma la tarea con el contexto de Notion",
+   "/inicio, toma su cola y cierra con /cierre",
    ""
   ],
   [
-   "Notion · Por aprobar",
-   "deja el borrador y cambia el estado",
+   "Aprobaciones",
+   "tarjeta en Notion que vence en 48 h",
    "box-brain"
   ],
   [
-   "Tú apruebas",
-   "desde el celular con Remote Control o en Notion",
+   "Tú decides",
+   "en dos ventanas de 10 minutos: 9:30 y 17:30",
    "box-ceo"
   ],
   [
-   "Herramienta",
-   "se publica, se envía o se cobra; queda registrado",
+   "Se ejecuta",
+   "n8n envía plantillas aprobadas; Gmail solo borradores",
    ""
   ]
  ],
  "orq_edges": [
   "crea",
   "lee",
-  "escribe",
-  "te avisa",
-  "ejecuta"
+  "pide",
+  "avisa",
+  "aprueba"
  ],
  "cycle_kpis": [
-  "Tiempo de primera respuesta",
-  "Costo por venta cobrada",
-  "% de clientes que refieren"
+  "Mediana de primera respuesta",
+  "Tasa de cierre",
+  "Cobrado sin IVA"
+ ],
+ "cycle": [
+  {
+   "titulo": "Pieza publicada",
+   "detalle": "video con la palabra clave de la oferta",
+   "slot": "marca"
+  },
+  {
+   "titulo": "Conversación",
+   "detalle": "ManyChat responde, pide permiso y califica",
+   "slot": "marketing"
+  },
+  {
+   "titulo": "Lead en cola",
+   "detalle": "el primer setter libre lo toma",
+   "slot": "ventas"
+  },
+  {
+   "titulo": "Llamada y cierre",
+   "detalle": "el setter agenda; tú cierras los deals A",
+   "slot": "ventas",
+   "humano": "HUMANO"
+  },
+  {
+   "titulo": "Propuesta",
+   "detalle": "1–2 páginas; firmada es el anexo de alcance",
+   "slot": "ventas",
+   "humano": "TÚ"
+  },
+  {
+   "titulo": "Pago recibido",
+   "detalle": "lo registras cuando aparece en tu banca",
+   "slot": "admin"
+  },
+  {
+   "titulo": "Factura CFDI",
+   "detalle": "con los datos exactos de la Constancia",
+   "slot": "admin"
+  },
+  {
+   "titulo": "Kickoff",
+   "detalle": "checklist «Proyecto ganado»",
+   "slot": "clientes"
+  },
+  {
+   "titulo": "Construcción",
+   "detalle": "brief, repo y código reciclado",
+   "slot": "producto"
+  },
+  {
+   "titulo": "Entrega",
+   "detalle": "acta de aceptación firmada",
+   "slot": "producto",
+   "humano": "TÚ"
+  },
+  {
+   "titulo": "Caso de éxito",
+   "detalle": "testimonio con permiso registrado",
+   "slot": "clientes"
+  },
+  {
+   "titulo": "Referido",
+   "detalle": "mensaje 1 a 1 que tú escribes",
+   "slot": "ventas",
+   "humano": "TÚ"
+  }
+ ],
+ "n_chats": "5",
+ "n_chats_label": "chats como máximo (2 en Fase 1)",
+ "n_activos": "7",
+ "chats_fase1": [
+  "Ventas",
+  "Automatizaciones y Gabinete"
+ ],
+ "gab_sub": "Rutina de lunes a viernes a las 7:10: un solo mensaje con tu plan del día, aprobaciones y alertas",
+ "bus_label": "plan del día · tareas por chat",
+ "pipes_sub": "n8n escucha eventos y lleva los relojes; Claude solo despierta cuando hay algo que decidir. Lo opera el chat «Automatizaciones y Gabinete».",
+ "pipes_fase1": true,
+ "rename": {
+  "Claude Code en la nube: chats por pilar y tareas programadas": "Claude Code en la nube: chats y tareas programadas"
+ },
+ "tools": [
+  "Notion Plus",
+  "Pipedrive Growth",
+  "ManyChat Pro",
+  "WhatsApp Business Platform",
+  "Meta Ads + Conversions API",
+  "Blotato Starter",
+  "Canva",
+  "n8n Cloud Starter",
+  "Claude Code (plan Max)",
+  "API de Claude",
+  "Bitwarden Premium",
+  "GitHub",
+  "Google Workspace",
+  "Zoom",
+  "SPEI + Stripe México",
+  "Portal o PAC de tu contadora",
+  "Google Analytics 4"
  ]
 }

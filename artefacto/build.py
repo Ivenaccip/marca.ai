@@ -80,6 +80,8 @@ figcaption{font-size:14px;color:var(--muted);margin:10px 4px 0;max-width:86ch}
 .kv{display:grid;grid-template-columns:110px 1fr;gap:6px 10px;font-size:14px;margin:0}
 .kv dt{color:var(--muted)}
 .kv dd{margin:0;display:flex;flex-wrap:wrap;gap:5px}
+.kvlist{margin:0;padding-left:18px;font-size:13.5px;line-height:1.45}
+.kvlist li{margin:0 0 4px}
 .chip{font-family:var(--font-mono);font-size:12px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:1px 9px;white-space:nowrap}
 .brain{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .brain .card h3{font-size:17px}
@@ -165,6 +167,10 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:13.5px}
 .diagram .t-badge-h{font-family:var(--font-mono);font-size:10px;font-weight:600;fill:var(--bg);letter-spacing:.04em}
 .diagram .g-fill{fill:var(--ink)}
 .diagram .g-ring{fill:none;stroke:var(--ink);stroke-width:1.4}
+.diagram .g-dash{stroke:var(--muted);stroke-dasharray:2.2 2}
+.diagram .t-agent-m{fill:var(--muted)}
+.diagram .chat-band{fill:var(--surface-2)}
+.diagram .t-chat{font-family:var(--font-display);font-weight:700;font-size:13.5px}
 .diagram .t-step-n{font-family:var(--font-mono);font-size:12px;fill:var(--muted)}
 .diagram .t-step{font-family:var(--font-display);font-weight:700;font-size:14.5px}
 .diagram .t-center{font-family:var(--font-display);font-weight:800;font-size:24px}
@@ -183,6 +189,8 @@ def glyph_html(key):
         inner = '<circle cx="6" cy="6" r="5" fill="currentColor"/>'
     elif k == 'draft':
         inner = '<circle cx="6" cy="6" r="5" fill="none" stroke-width="1.4"/><path d="M6 1 A5 5 0 0 1 6 11 Z" fill="currentColor"/>'
+    elif k == 'manual':
+        inner = '<circle cx="6" cy="6" r="5" fill="none" stroke-width="1.4" stroke-dasharray="2.2 2" opacity=".75"/>'
     else:
         inner = '<circle cx="6" cy="6" r="5" fill="none" stroke-width="1.4"/>'
     return f'<svg class="g" viewBox="0 0 12 12" aria-hidden="true">{inner}</svg>'
@@ -199,6 +207,18 @@ def weeks(d):
     elif 'día' in dl or 'dia' in dl: v /= 7
     return max(1, v)
 
+def short_role(h):
+    """Nombre corto de un rol humano para los chips del mapa ('' si no es del equipo)."""
+    s = h.split(':')[0]
+    s = re.sub(r'\s*\(.*?\)', '', s).strip()
+    s = re.sub(r'\s*\(.*$', '', s).strip()
+    if len(s) > 30:
+        s = re.split(r',| y | que | para ', s)[0].strip()
+    low = s.lower()
+    if low in ('tú', 'tu', 'tú (ceo)') or low.startswith('tú ') or 'cliente' in low or 'aliado' in low or 'anfitri' in low:
+        return ''
+    return s[:1].upper() + s[1:]
+
 def build(F, X):
     allp = F['pillars_sorted']
     cols = [p for p in allp if not p['_layer']]
@@ -206,8 +226,8 @@ def build(F, X):
     people = []
     for p in allp:
         for h in p.get('personas', []):
-            hn = re.sub(r'\s*\(.*?\)', '', h).strip()
-            if hn and hn.lower() not in ('tú', 'tu', 'tú (ceo)') and hn not in people:
+            hn = short_role(h)
+            if hn and hn not in people:
                 people.append(hn)
     n_agents = sum(len(p['agentes']) for p in allp)
     gaps = F['puntos_ciegos']
@@ -229,10 +249,12 @@ def build(F, X):
              '<li><span class="tag-new">NUEVO</span> lo que no habías contemplado</li>'
              f'<li>{glyph_html("automatico")} automático</li>'
              f'<li>{glyph_html("borrador_con_aprobacion")} borrador que tú apruebas</li>'
-             f'<li>{glyph_html("asistido")} asistido: lo opera una persona</li></ul>')
+             f'<li>{glyph_html("asistido")} asistido: lo opera una persona</li>'
+             f'<li>{glyph_html("manual_con_plantilla")} a mano con plantilla: todavía no es agente</li></ul>')
     H.append('<div class="stats">'
-             f'<div class="stat"><b>{len(allp)}</b><span>pilares (un chat cada uno)</span></div>'
-             f'<div class="stat"><b>{n_agents}</b><span>agentes</span></div>'
+             f'<div class="stat"><b>{len(allp)}</b><span>pilares: áreas con dueño</span></div>'
+             f'<div class="stat"><b>{esc(X.get("n_chats", ""))}</b><span>{esc(X.get("n_chats_label", "chats"))}</span></div>'
+             f'<div class="stat"><b>{esc(X.get("n_activos", n_agents))}</b><span>agentes encendidos hasta marzo, de {n_agents} diseñados</span></div>'
              f'<div class="stat"><b>{len(F["cerebro_notion"]["bases"])}</b><span>bases en Notion</span></div>'
              f'<div class="stat"><b>{len(gaps)}</b><span>puntos ciegos · {p0} urgentes</span></div>'
              '</div></header>')
@@ -244,7 +266,7 @@ def build(F, X):
     # ---- mapa
     H.append('<section id="mapa"><h2>Mapa general</h2>')
     H.append(f'<p class="sec-lede">{esc(X["map_lede"])}</p>')
-    H.append(f'<figure><div class="fig">{svg_map(F, cols, layer, people)}</div>'
+    H.append(f'<figure><div class="fig">{svg_map(F, cols, layer, people, X)}</div>'
              f'<figcaption>{esc(X["map_caption"])}</figcaption></figure></section>')
     # ---- ciclo
     H.append('<section id="ciclo"><h2>El ciclo del cliente</h2>')
@@ -261,17 +283,24 @@ def build(F, X):
         H.append(f'<p class="mission">{esc(p["mision"])}</p>')
         if p.get('dueno_humano'):
             H.append(f'<p class="owner">Dueño: {esc(p["dueno_humano"])}</p>')
+        if p.get('chat'):
+            H.append(f'<p class="owner">Chat: {esc(p["chat"])}</p>')
         H.append('<ul class="agents">')
         for a in p['agentes']:
             k = auton_key(a.get('autonomia'))
             io = ' → '.join(x for x in [a.get('disparador', ''), a.get('salida', '')] if x)
             H.append(f'<li>{glyph_html(k)}<div><span class="nm">{esc(a["nombre"])}</span> <span class="au">· {esc(AUTON[k][1])}</span></div>'
                      f'<div class="ms">{esc(a.get("mision", ""))}</div>'
-                     + (f'<div class="io">{esc(io)}</div>' if io else '') + '</li>')
+                     + (f'<div class="io">{esc(io)}</div>' if io else '')
+                     + (f'<div class="io"><b>Se enciende:</b> {esc(a["se_enciende"])}</div>' if a.get('se_enciende') else '') + '</li>')
         H.append('</ul><dl class="kv">')
         for lab, key in [('Personas', 'personas'), ('Herramientas', 'herramientas'), ('Notion', 'bases_notion'), ('KPIs', 'kpis'), ('Rituales', 'rituales')]:
             if p.get(key):
-                H.append(f'<dt>{lab}</dt><dd>{chips(p[key])}</dd>')
+                items = [i for i in p[key] if i]
+                if any(len(i) > 38 for i in items):
+                    H.append(f'<dt>{lab}</dt><dd><ul class="kvlist">' + ''.join(f'<li>{esc(i)}</li>' for i in items) + '</ul></dd>')
+                else:
+                    H.append(f'<dt>{lab}</dt><dd>{chips(items)}</dd>')
         H.append('</dl></article>')
     H.append('</div></section>')
     # ---- orquestación
@@ -412,7 +441,10 @@ def prepare(F):
     return F
 
 if __name__ == '__main__':
+    # uso: python3 build.py <arquitectura.json> <textos.json> <salida.html> [verificacion.json]
     F = prepare(json.load(open(sys.argv[1])))
     X = json.load(open(sys.argv[2]))
+    if len(sys.argv) > 4 and 'verificaciones' not in X:
+        X['verificaciones'] = json.load(open(sys.argv[4]))['verificaciones']
     open(sys.argv[3], 'w').write(build(F, X))
     print('written', sys.argv[3])
