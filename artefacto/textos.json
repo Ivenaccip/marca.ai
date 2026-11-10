@@ -1,0 +1,63 @@
+{
+ "title": "Mapa del sistema marca.ai",
+ "eyebrow": "marca.ai · mapa del sistema · 10 de noviembre de 2026",
+ "h1": "Tu marca personal, operada como un sistema",
+ "map_lede": "Léelo de arriba abajo. Tú decides y apruebas; el jefe de gabinete reparte el trabajo; cada pilar es un chat con sus agentes; todos leen y escriben en Notion; las tuberías mueven los datos entre tus herramientas.",
+ "map_caption": "Cada tarjeta es un chat (un proyecto de Claude) con sus agentes. El círculo junto a cada agente indica cuánta libertad tiene. Toca un pilar para ir a su detalle.",
+ "cycle_lede": "El mismo cliente pasa por todos los pilares. Si un traspaso falla (un lead que nadie toma, una venta que no genera factura, un proyecto que no se vuelve caso de éxito) el ciclo se rompe y lo pagas en pauta.",
+ "cycle_caption": "Las etiquetas TÚ y HUMANO marcan dónde decide una persona; lo demás lo preparan agentes. La flecha bermellón cierra el ciclo: el referido arranca la siguiente vuelta.",
+ "pillars_lede": "Cada pilar tiene un dueño humano, sus agentes y los datos que deja en Notion. Los marcados NUEVO no estaban en tu lista.",
+ "orq_caption": "Ningún agente le habla a un cliente, gasta dinero ni toca impuestos sin pasar por tu aprobación. El trabajo se pasa por Notion, no por la memoria de un chat.",
+ "brain_lede": "Una base por cada cosa del mundo real (persona, oportunidad, proyecto, pieza, cobro). Agentes y equipo escriben en el mismo lugar; los tableros solo filtran.",
+ "gaps_lede": "Lo que no mencionaste y te va a costar dinero, clientes o problemas legales si no lo resuelves. Siguiendo tu regla 90/10, casi todo está fuera de tu terreno técnico.",
+ "road_lede": "Primero a mano y documentado, después automatizado. Cada fase termina con un criterio que se puede comprobar.",
+ "rhythm_lede": "Los rituales que mantienen vivo el sistema: los agentes preparan, las personas deciden.",
+ "stack_lede": "Una herramienta por función. Los costos son aproximados: confírmalos antes de contratar.",
+ "q_lede": "Con estas respuestas afino el sistema y empiezo a construirlo.",
+ "src_lede": "Los datos que cambian seguido (políticas, leyes, precios, APIs) se revisaron con búsqueda web el 10 de noviembre de 2026. Esto no sustituye la opinión de tu contadora ni de un abogado.",
+ "footer": "Hecho a partir de 13 investigaciones independientes (6 pilares y 7 lentes expertas), una síntesis y dos revisiones críticas. La fuente vive en el repositorio marca.ai.",
+ "orq_nodes": [
+  [
+   "Jefe de gabinete",
+   "a las 8:00 lee el cerebro y crea las tareas del día",
+   ""
+  ],
+  [
+   "Notion · Tareas",
+   "cada tarea con pilar, responsable, fecha y contexto",
+   "box-brain"
+  ],
+  [
+   "Chat del pilar",
+   "su agente toma la tarea con el contexto de Notion",
+   ""
+  ],
+  [
+   "Notion · Por aprobar",
+   "deja el borrador y cambia el estado",
+   "box-brain"
+  ],
+  [
+   "Tú apruebas",
+   "desde el celular con Remote Control o en Notion",
+   "box-ceo"
+  ],
+  [
+   "Herramienta",
+   "se publica, se envía o se cobra; queda registrado",
+   ""
+  ]
+ ],
+ "orq_edges": [
+  "crea",
+  "lee",
+  "escribe",
+  "te avisa",
+  "ejecuta"
+ ],
+ "cycle_kpis": [
+  "Tiempo de primera respuesta",
+  "Costo por venta cobrada",
+  "% de clientes que refieren"
+ ]
+}
