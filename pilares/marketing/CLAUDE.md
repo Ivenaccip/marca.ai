@@ -281,7 +281,12 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo; el número es el
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Marketing en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, la base Contenido, Métricas, el Diccionario de métricas, fuentes y UTMs, la Biblioteca de respuestas del bot y la Matriz de aprobaciones.
+- **Vista del pilar:** [Vista · marketing](https://app.notion.com/p/41579e24d0fe819db89ae2cab4d6e53b), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más la producción de contenido.
+- **Bases:** [Contenido](https://app.notion.com/p/753033b84cc94a2ab7ff2cfe7d8ebaf5) y [Métricas](https://app.notion.com/p/442d196753254a24bb0516623ea0cc53).
+- **Páginas de Conocimiento y decisiones:** [Diccionario de métricas, fuentes y UTMs](https://app.notion.com/p/41579e24d0fe8153a529caa22a9a1835), [Biblioteca de respuestas del bot](https://app.notion.com/p/41579e24d0fe8116a99cf5ecf10ea9e7) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86).
+- **Otras páginas:** [Junta del lunes](https://app.notion.com/p/41579e24d0fe81d7b2edd9fecfb1da2a) (ubicación provisional), donde Pauta anota las decisiones de presupuesto y creativos, y [Cómo trabajamos · Editor](https://app.notion.com/p/41579e24d0fe818db555e57e24c0ff94), la página de rol del editor.
+
+Las demás bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

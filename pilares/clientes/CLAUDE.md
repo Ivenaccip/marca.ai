@@ -324,7 +324,13 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo):
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Clientes en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, la base Proyectos con la plantilla «Proyecto ganado», la base Clientes, el Tablero del asistente de operación, «Clientes que no aceptamos» y la Matriz de aprobaciones. La encuesta de Google Forms y las plantillas de reporte y de acta: enlaces por definir cuando existan.
+- **Vista del pilar:** [Vista · clientes](https://app.notion.com/p/41579e24d0fe810e8865ec6f18d4f910), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más el checklist «Proyecto ganado», el soporte y los cambios abiertos y la salud de clientes.
+- **Bases:** [Proyectos](https://app.notion.com/p/5e022dc6c7ac470db8d0a9ea69e9075b), con la fila [Plantilla · Proyecto ganado](https://app.notion.com/p/41579e24d0fe81ddbc65f62cd413b204), y [Clientes](https://app.notion.com/p/d7d65fb7fa0041ee956e9f41f9f373c7).
+- **Páginas de Conocimiento y decisiones:** [Clientes que no aceptamos](https://app.notion.com/p/41579e24d0fe81eea035c42e97551ba3) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86).
+- **Del asistente de operación:** [Tablero del asistente de operación](https://app.notion.com/p/41579e24d0fe81ebb1fff2ded27d8a21) y su página de rol, [Cómo trabajamos · Asistente de operación](https://app.notion.com/p/41579e24d0fe8175bd11f12ff2762afd).
+- La encuesta de Google Forms y las plantillas de reporte y de acta: enlaces por definir cuando existan.
+
+Las demás bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

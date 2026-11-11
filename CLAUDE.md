@@ -11,13 +11,13 @@ Toda sesión de Claude Code que abre este repo carga este archivo: los 5 chats, 
 
 ### Enlaces del cerebro en Notion
 
-Por definir hasta que exista el cerebro (Fase 1, diciembre de 2026). Mientras digan «por definir», busca cada página o base por su nombre exacto con el conector de Notion; si no existe o la sesión no tiene conector, dilo y trabaja solo con el repo.
+El esqueleto del cerebro se construyó el 10 y 11 de noviembre de 2026 bajo la raíz [marca.ai · Cerebro](https://app.notion.com/p/41479e24d0fe8186b2feed496bd5c87c) y se llena en Fase 0 y Fase 1; sus páginas de reglas están en «Propuesta» hasta que el dueño las revise. Si un enlace no abre o la sesión no tiene conector de Notion, dilo y trabaja solo con el repo.
 
-- Guía de operación de agentes (reglas comunes, dueños del dato, precedencia de memoria y presupuesto de corridas): por definir
-- Matriz de aprobaciones: por definir
-- Bases que usan las skills (Tareas, Aprobaciones, Bitácora y planes y Conocimiento y decisiones): por definir
-- Las otras 6 bases (Personas y accesos, Clientes, Proyectos, Facturas y cobros, Contenido y Métricas): por definir
-- La Vista de cada pilar y las páginas propias de cada pilar van en la sección «Contexto en Notion» de su `pilares/<id>/CLAUDE.md`.
+- Usa siempre estos enlaces o ids; no busques las bases por nombre, porque en el Notion del dueño hay otras con nombres parecidos fuera del sistema.
+- [Guía de operación de agentes](https://app.notion.com/p/41579e24d0fe8199b051f824cfd5e0f8) (reglas comunes, dueños del dato, precedencia de memoria y presupuesto de corridas) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86)
+- Bases que usan las skills: [Tareas](https://app.notion.com/p/27b9b21a8c5441dfaf44c3314c4e1f19), [Aprobaciones](https://app.notion.com/p/64481fbce3e14fa9ac274a4a6bf576a3), [Bitácora y planes](https://app.notion.com/p/a1cbec8b1aa2406b8b157c5164185b2f) y [Conocimiento y decisiones](https://app.notion.com/p/addd787625584b46bbb091b3bfac05b5)
+- Las otras 6 bases: [Personas y accesos](https://app.notion.com/p/a60972c4e9ac460c854a35dff2270030), [Clientes](https://app.notion.com/p/d7d65fb7fa0041ee956e9f41f9f373c7), [Proyectos](https://app.notion.com/p/5e022dc6c7ac470db8d0a9ea69e9075b), [Facturas y cobros](https://app.notion.com/p/b73ef34bbff94e22bfb9a32c7556423c), [Contenido](https://app.notion.com/p/753033b84cc94a2ab7ff2cfe7d8ebaf5) y [Métricas](https://app.notion.com/p/442d196753254a24bb0516623ea0cc53)
+- La Vista de cada pilar y las páginas propias de cada pilar van en la sección «Contexto en Notion» de su `pilares/<id>/CLAUDE.md`; lo construido y lo que falta, en [docs/02-cerebro-notion.md](docs/02-cerebro-notion.md#estado-de-la-construcción).
 
 ## Los 5 chats
 

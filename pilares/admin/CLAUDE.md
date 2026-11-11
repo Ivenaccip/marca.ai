@@ -338,7 +338,13 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo; el número es el
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Administración en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, Facturas y cobros, Clientes, la página «Obligaciones fiscales», las reglas fiscales vigentes, la plantilla «Cierre AAAA-MM» y la Matriz de aprobaciones. La hoja de dinero y las carpetas de Drive no se enlazan aquí: son de acceso restringido.
+- **Vista del pilar:** [Vista · admin](https://app.notion.com/p/41579e24d0fe81d4b1b6cae3fc95f7c3), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más las reglas y páginas de administración. Sus bloques «Cobranza abierta» y «Borradores por timbrar» todavía no existen: esperan las columnas que le faltan a Facturas y cobros.
+- **Bases:** [Facturas y cobros](https://app.notion.com/p/b73ef34bbff94e22bfb9a32c7556423c) y [Clientes](https://app.notion.com/p/d7d65fb7fa0041ee956e9f41f9f373c7).
+- **Páginas de Conocimiento y decisiones:** [Obligaciones fiscales](https://app.notion.com/p/41579e24d0fe81119fe5c1d214789462), [Expediente de proveedor](https://app.notion.com/p/41579e24d0fe81af9b17e63dc4455af8) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86); las reglas fiscales vigentes de la contadora también van en esa base, con Tipo «Regla fiscal».
+- **Cierres:** [Plantilla · Cierre AAAA-MM](https://app.notion.com/p/41579e24d0fe8171a6d0e0ba10fc602c), dentro de [Cierres mensuales](https://app.notion.com/p/41579e24d0fe81118a73e1895b75202f) (ubicación provisional). La página de rol de la contadora es [Cómo trabajamos · Contadora](https://app.notion.com/p/41579e24d0fe81fd8f09f4bfd328c5b9).
+- La hoja de dinero y las carpetas de Drive no se enlazan aquí: son de acceso restringido.
+
+Las demás bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

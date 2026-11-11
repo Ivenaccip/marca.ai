@@ -309,7 +309,12 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo; el número es el
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Legal en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, Personas y accesos, «Datos que guardamos», el Manual de contingencia y la Matriz de aprobaciones. «Cuentas críticas y vencimientos» no se enlaza aquí: es privada.
+- **Vista del pilar:** [Vista · legal](https://app.notion.com/p/41579e24d0fe8152a4c6eb4adb73a431), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más las altas y bajas en curso y las páginas de legal.
+- **Base:** [Personas y accesos](https://app.notion.com/p/a60972c4e9ac460c854a35dff2270030).
+- **Páginas de Conocimiento y decisiones:** [Datos que guardamos](https://app.notion.com/p/41579e24d0fe8151b3cfd1ee7be56036), [Manual de contingencia](https://app.notion.com/p/41579e24d0fe81669220ea6a74e3d993) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86).
+- «Cuentas críticas y vencimientos» no se enlaza aquí: es privada. Por ahora es una página aparte bajo la raíz del cerebro, no una fila de Conocimiento y decisiones.
+
+Las demás bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

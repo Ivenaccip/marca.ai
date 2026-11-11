@@ -151,7 +151,10 @@ Esta tabla es la ficha de cada agente. Ningún agente se enciende sin cumplir su
 
 ## Estado actual y próximos pasos
 
-Al 10 de noviembre de 2026 el sistema está en **Fase 0**: el repo tiene la estructura y las instrucciones, y ningún agente está encendido. El cerebro en Notion, los flujos de n8n y los dos primeros chats se construyen en Fase 1; el CLAUDE.md raíz y las skills `/inicio`, `/cierre` y `/pedir-aprobacion` ya están escritos aquí y se usan desde entonces.
+Al 10 de noviembre de 2026 el sistema está en **Fase 0**: el repo tiene la estructura y las instrucciones, y ningún agente está encendido. Los flujos de n8n y los dos primeros chats se construyen en Fase 1; el CLAUDE.md raíz y las skills `/inicio`, `/cierre` y `/pedir-aprobacion` ya están escritos aquí y se usan desde entonces. El cerebro en Notion se adelantó:
+
+- **Esqueleto del cerebro, construido el 10 y 11 de noviembre de 2026:** [marca.ai · Cerebro](https://app.notion.com/p/41479e24d0fe8186b2feed496bd5c87c), que se llena en Fase 0 y Fase 1. Tiene las 10 bases con 13 de sus 16 relaciones y el rollup «Pilar de la tarea», 41 de sus 55 vistas, 16 páginas de reglas en Conocimiento y decisiones (todas en «Propuesta»), 8 páginas aparte, 3 tableros (Tablero del CEO, Tablero del asistente de operación y Pilares, con las 8 vistas de pilar) con 57 de sus 61 vistas enlazadas, la fila «Plantilla · Proyecto ganado» en Proyectos, las 24 tareas de Fase 0 en Tareas y la fila de la construcción en Bitácora y planes. Sus enlaces están en el [CLAUDE.md raíz](CLAUDE.md#enlaces-del-cerebro-en-notion).
+- **Lo que falta, con tu permiso:** el lote de ediciones anotadas (37 anotaciones, 4 de ellas opcionales). El conector no pudo aplicarlas porque editar bases, vistas y páginas pide un permiso que solo das tú: faltan 5 relaciones (3 entre bases y 2 de una base consigo misma), la fórmula «Días de atraso», la descripción de Tareas y el prefijo del ID de Contenido; renombrar y configurar las 10 vistas por defecto; 8 vistas que esperan esas columnas; el filtro por «Pilar de la tarea» en las 8 vistas de aprobaciones por pilar, y quitar enlaces automáticos de 4 páginas. Detalle en [docs/02](docs/02-cerebro-notion.md#ediciones-pendientes).
 
 ### Fase 0. Cimientos de negocio: solo lo que tiene fecha o protege dinero
 

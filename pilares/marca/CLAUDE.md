@@ -251,7 +251,11 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo; el número es el
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Marca en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, la página «Posicionamiento y Guía de voz», la base Contenido y la Matriz de aprobaciones.
+- **Vista del pilar:** [Vista · marca](https://app.notion.com/p/41579e24d0fe81f4acb2cb7f6c39b809), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más las páginas de marca y las ideas y guiones.
+- **Páginas de Conocimiento y decisiones:** [Posicionamiento y Guía de voz](https://app.notion.com/p/41579e24d0fe81fd8b03e789fda100b6) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86).
+- **Base:** [Contenido](https://app.notion.com/p/753033b84cc94a2ab7ff2cfe7d8ebaf5).
+
+Las demás bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

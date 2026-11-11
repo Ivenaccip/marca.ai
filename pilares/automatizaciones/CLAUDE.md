@@ -330,7 +330,11 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo; el número es el
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Automatizaciones en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, la Guía de operación de agentes, la Matriz de aprobaciones, el Manual de contingencia y las bases Tareas, Aprobaciones y Bitácora y planes.
+- **Vista del pilar:** [Vista · automatizaciones](https://app.notion.com/p/41579e24d0fe8139bd9ff2469fd1efaf), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más la Bandeja de todos los pilares y las tarjetas «Activar automatización» y «Plantilla de envío» pendientes.
+- **Páginas de Conocimiento y decisiones:** [Guía de operación de agentes](https://app.notion.com/p/41579e24d0fe8199b051f824cfd5e0f8), [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86) y [Manual de contingencia](https://app.notion.com/p/41579e24d0fe81669220ea6a74e3d993).
+- **Bases:** [Tareas](https://app.notion.com/p/27b9b21a8c5441dfaf44c3314c4e1f19), [Aprobaciones](https://app.notion.com/p/64481fbce3e14fa9ac274a4a6bf576a3) y [Bitácora y planes](https://app.notion.com/p/a1cbec8b1aa2406b8b157c5164185b2f).
+
+Las demás bases están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion). Lo que le falta al esqueleto, empezando por el lote de ediciones que necesita tu permiso, está en [docs/02-cerebro-notion.md](../../docs/02-cerebro-notion.md#estado-de-la-construcción).
 
 ## Ver también
 

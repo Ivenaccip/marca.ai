@@ -8,20 +8,116 @@ Aquí están las 10 bases (propósito, propiedades con el tipo sugerido de Notio
 
 > **La página «Irremplazables» de tu Notion no se toca.** Queda fuera del sistema: no se mueve, no se renombra, no se edita, no se archiva (aunque la regla de los agentes sea archivar en vez de borrar) y no se usa como página raíz ni como fuente de ninguna base. Como el conector de Notion actúa con tus permisos y llega a tus páginas privadas, la regla vale también para todos los agentes y rutinas.
 
-**Estado al 10 de noviembre de 2026:** por construir. Según la ruta, las 10 bases entran en Fase 1 (diciembre de 2026). Cuando existan, sus enlaces se anotan en la sección «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../CLAUDE.md), que hoy dice «por definir».
+**Estado al 11 de noviembre de 2026:** el esqueleto ya existe en Notion (se adelantó a Fase 0) y se llena en Fase 0 y Fase 1. Lo construido, lo provisional y lo que falta están en [Estado de la construcción](#estado-de-la-construcción); los enlaces, en la sección «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Índice
 
-1. [Plan y límites](#plan-y-límites)
-2. [Mapa de las 10 bases](#mapa-de-las-10-bases)
-3. [Relaciones](#relaciones)
-4. [Tipos de propiedad](#tipos-de-propiedad)
-5. [Las 10 bases](#las-10-bases)
-6. [Lo que no vive en estas bases](#lo-que-no-vive-en-estas-bases)
-7. [Páginas](#páginas)
-8. [Tableros por rol](#tableros-por-rol)
-9. [Permisos](#permisos)
-10. [Cómo se construye](#cómo-se-construye)
+1. [Estado de la construcción](#estado-de-la-construcción)
+2. [Plan y límites](#plan-y-límites)
+3. [Mapa de las 10 bases](#mapa-de-las-10-bases)
+4. [Relaciones](#relaciones)
+5. [Tipos de propiedad](#tipos-de-propiedad)
+6. [Las 10 bases](#las-10-bases)
+7. [Lo que no vive en estas bases](#lo-que-no-vive-en-estas-bases)
+8. [Páginas](#páginas)
+9. [Tableros por rol](#tableros-por-rol)
+10. [Permisos](#permisos)
+11. [Cómo se construye](#cómo-se-construye)
+
+## Estado de la construcción
+
+Estado al 11 de noviembre de 2026. El esqueleto del cerebro se construyó el 10 y 11 de noviembre de 2026, en Fase 0 y antes de lo que marcaba la ruta (Fase 1, diciembre), y se llena en Fase 0 y Fase 1. Todo vive bajo la raíz [marca.ai · Cerebro](https://app.notion.com/p/41479e24d0fe8186b2feed496bd5c87c), una página privada nueva solo para el sistema; la página «Irremplazables» no se tocó. Las 16 páginas de reglas están en «Propuesta» hasta que las revises.
+
+De [Cómo se construye](#cómo-se-construye), los pasos 0 a 3 están hechos salvo las [ediciones pendientes](#ediciones-pendientes); el paso 4 queda con los enlaces del [CLAUDE.md raíz](../CLAUDE.md#enlaces-del-cerebro-en-notion) y de la sección «Contexto en Notion» de cada `pilares/<id>/CLAUDE.md` (los accesos los sigues dando tú a mano), y faltan los pasos 5 y 6. El resto de este documento es el diseño; varios de sus «por definir» quedaron resueltos por ahora con las [decisiones provisionales](#decisiones-provisionales).
+
+### Bases
+
+Para consultar una base, usa su data source como `collection://<id>`.
+
+| # | Base | Data source | Filas | Vistas | Qué falta |
+|---|---|---|---|---|---|
+| 1 | [Conocimiento y decisiones](https://app.notion.com/p/addd787625584b46bbb091b3bfac05b5) | `c5fb4a3e-3844-4b11-8ebc-02912f86109d` | 16 páginas de reglas | 5 de 6 | La relación consigo misma «Reemplaza a» y la vista «Todas» |
+| 2 | [Personas y accesos](https://app.notion.com/p/a60972c4e9ac460c854a35dff2270030) | `6dd79abe-e4cf-4d5a-9ba8-abc1477ec568` | 0 | 3 de 4 | La vista «Todas» |
+| 3 | [Clientes](https://app.notion.com/p/d7d65fb7fa0041ee956e9f41f9f373c7) | `e35fe233-06ce-426b-b2e8-c86db432cfd1` | 0 | 3 de 4 | La vista «Todos» |
+| 4 | [Proyectos](https://app.notion.com/p/5e022dc6c7ac470db8d0a9ea69e9075b) | `ed98bc13-4c48-4944-a64a-0a9dddcd1310` | 1, la [plantilla](https://app.notion.com/p/41579e24d0fe81ddbc65f62cd413b204) | 5 de 6 | La relación con Clientes y la vista «Todos» |
+| 5 | [Facturas y cobros](https://app.notion.com/p/b73ef34bbff94e22bfb9a32c7556423c) | `0adcf73d-fe92-401f-9dc0-2327094a09cf` | 0 | 1 de 6 | Las relaciones con Clientes y Proyectos, la fórmula «Días de atraso» y 5 vistas: «Todas», «Cobranza abierta», «Vencidas», «Por estado» y «Borradores por timbrar» |
+| 6 | [Tareas](https://app.notion.com/p/27b9b21a8c5441dfaf44c3314c4e1f19) | `d019d919-31cb-434c-a9d0-9b268271ce1b` | 24, las tareas de Fase 0 | 7 de 8 | Su descripción igual a la del diseño y la vista «Todas» |
+| 7 | [Aprobaciones](https://app.notion.com/p/64481fbce3e14fa9ac274a4a6bf576a3) | `4f6ebde6-8265-4e7b-ab21-7102221bc53f` | 0 | 5 de 6 | La vista «Todas» |
+| 8 | [Bitácora y planes](https://app.notion.com/p/a1cbec8b1aa2406b8b157c5164185b2f) | `e59e722c-d722-471e-9099-a818ccd521ec` | 1, la [fila de la construcción](https://app.notion.com/p/41579e24d0fe8117b2c9d2ac5ad2a6c4) | 5 de 6 | La vista «Recientes» |
+| 9 | [Métricas](https://app.notion.com/p/442d196753254a24bb0516623ea0cc53) | `828ae3b0-017d-426c-accb-3a52a12dc545` | 0 | 3 de 4 | La vista «Todas» |
+| 10 | [Contenido](https://app.notion.com/p/753033b84cc94a2ab7ff2cfe7d8ebaf5) | `ba069113-ad81-468e-98b4-8496eae3d43b` | 0 | 4 de 5 | La relación consigo misma «Pieza madre», el prefijo de «ID» y la vista «Todas» |
+
+La vista que falta en cada base («Todas», «Todos» o «Recientes») ya existe con el nombre «Default view»: hay que renombrarla y configurarla. Existen 13 de las 16 relaciones entre bases, cada una con su columna espejo, y el rollup «Pilar de la tarea» de Aprobaciones (el pilar de la Tarea ligada); faltan Proyectos → Clientes, Facturas y cobros → Clientes, Facturas y cobros → Proyectos y las 2 relaciones de una base consigo misma.
+
+### Páginas
+
+- **En Conocimiento y decisiones (16, todas en «Propuesta»):** [Guía de operación de agentes](https://app.notion.com/p/41579e24d0fe8199b051f824cfd5e0f8), [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86), [Oferta y precios vigentes](https://app.notion.com/p/41579e24d0fe813483b3f8bc16ce7391), [Posicionamiento y Guía de voz](https://app.notion.com/p/41579e24d0fe81fd8b03e789fda100b6), [Playbook de ventas](https://app.notion.com/p/41579e24d0fe81448674c68180aff1af), [Diccionario comercial](https://app.notion.com/p/41579e24d0fe812b9c8fdc26d4665181), [Plan de compensación v1](https://app.notion.com/p/41579e24d0fe81fe82d0fb9db71a0662), [Programa de referidos](https://app.notion.com/p/41579e24d0fe8149be2cefa01da4f30e), [Diccionario de métricas, fuentes y UTMs](https://app.notion.com/p/41579e24d0fe8153a529caa22a9a1835), [Obligaciones fiscales](https://app.notion.com/p/41579e24d0fe81119fe5c1d214789462), [Manual de contingencia](https://app.notion.com/p/41579e24d0fe81669220ea6a74e3d993), [Clientes que no aceptamos](https://app.notion.com/p/41579e24d0fe81eea035c42e97551ba3), [Datos que guardamos](https://app.notion.com/p/41579e24d0fe8151b3cfd1ee7be56036), [Expediente de proveedor](https://app.notion.com/p/41579e24d0fe81af9b17e63dc4455af8), [Biblioteca de respuestas del bot](https://app.notion.com/p/41579e24d0fe8116a99cf5ecf10ea9e7) y [Estándares de código y checklist de salida a producción](https://app.notion.com/p/41579e24d0fe81689520ce267a4db783).
+- **Aparte (8):** «Cuentas críticas y vencimientos» (privada: solo la estructura de sus tablas, sin ningún dato y sin enlace en el repo), [Cómo trabajamos · Setters](https://app.notion.com/p/41579e24d0fe81b987a9e0dcef8f59c4), [Cómo trabajamos · Editor](https://app.notion.com/p/41579e24d0fe818db555e57e24c0ff94), [Cómo trabajamos · Contadora](https://app.notion.com/p/41579e24d0fe81fd8f09f4bfd328c5b9), [Cómo trabajamos · Asistente de operación](https://app.notion.com/p/41579e24d0fe8175bd11f12ff2762afd), [Cierres mensuales](https://app.notion.com/p/41579e24d0fe81118a73e1895b75202f) con [Plantilla · Cierre AAAA-MM](https://app.notion.com/p/41579e24d0fe8171a6d0e0ba10fc602c) dentro, y [Junta del lunes](https://app.notion.com/p/41579e24d0fe81d7b2edd9fecfb1da2a). Todas cuelgan de la raíz, salvo la plantilla de cierre.
+- **Filas especiales:** [Plantilla · Proyecto ganado](https://app.notion.com/p/41579e24d0fe81ddbc65f62cd413b204) en Proyectos, que las vistas excluyen por nombre (convertirla en plantilla nativa de la base es opcional y se hace desde la app); las 24 tareas de Fase 0 en Tareas (ID externo F0-01 a F0-24), y la [fila de la construcción](https://app.notion.com/p/41579e24d0fe8117b2c9d2ac5ad2a6c4) en Bitácora y planes, con los conteos, lo provisional y lo pendiente.
+- **Todavía no se crean:** la página semanal de Brújula (febrero de 2027) y la lista de oportunidades de Altavoz (Fase 3).
+
+### Tableros
+
+| Tablero | Vistas enlazadas | Nota |
+|---|---|---|
+| [Tablero del CEO](https://app.notion.com/p/41579e24d0fe8107b6b2f62fcf2c9939) | 7 de 7 | «Proyectos en riesgo» es provisional: su criterio está por definir |
+| [Tablero del asistente de operación](https://app.notion.com/p/41579e24d0fe81ebb1fff2ded27d8a21) | 4 de 6 | Faltan «Pagos por registrar (provisional)» y «Cobranza por vencer y vencida», que esperan columnas de Facturas y cobros; «Aprobaciones dentro de su límite» es provisional |
+| [Pilares](https://app.notion.com/p/41579e24d0fe81908453f9e536720945) | — | Página que agrupa las 8 vistas de pilar |
+| [Vista · ventas](https://app.notion.com/p/41579e24d0fe81159978c85907ecf94c) | 5 de 5 | Chat de Fase 1 |
+| [Vista · automatizaciones](https://app.notion.com/p/41579e24d0fe8139bd9ff2469fd1efaf) | 6 de 6 | Chat de Fase 1 |
+| [Vista · marketing](https://app.notion.com/p/41579e24d0fe819db89ae2cab4d6e53b) | 5 de 5 |  |
+| [Vista · marca](https://app.notion.com/p/41579e24d0fe81f4acb2cb7f6c39b809) | 6 de 6 |  |
+| [Vista · producto](https://app.notion.com/p/41579e24d0fe81a7a0cde17a9d486cdf) | 6 de 6 |  |
+| [Vista · admin](https://app.notion.com/p/41579e24d0fe81d4b1b6cae3fc95f7c3) | 5 de 7 | Faltan «Cobranza abierta» y «Borradores por timbrar», que esperan columnas de Facturas y cobros |
+| [Vista · clientes](https://app.notion.com/p/41579e24d0fe810e8865ec6f18d4f910) | 7 de 7 |  |
+| [Vista · legal](https://app.notion.com/p/41579e24d0fe8152a4c6eb4adb73a431) | 6 de 6 |  |
+
+En total, 57 de las 61 vistas enlazadas. En las 8 vistas de pilar, el bloque «Aprobaciones pendientes» filtra solo por «Solicitada por» (los agentes del pilar): Notion aceptó la condición sobre el rollup «Pilar de la tarea», pero no la guardó. Mientras no se agregue, una aprobación que pide un Piloto no aparece en la vista de su pilar aunque tenga una Tarea del pilar; sí aparece en el Tablero del CEO.
+
+### Decisiones provisionales
+
+Se revisan contigo en la junta del lunes.
+
+- Raíz «marca.ai · Cerebro» como página privada (borrador a nivel workspace); todo lo nuevo vive debajo de ella.
+- Título llamado «Título» en Tareas, Conocimiento y decisiones, Aprobaciones, Bitácora y planes, Métricas y Contenido (el diseño lo dejaba por definir en cuatro de ellas), con formato sugerido en su descripción.
+- Opciones con mayúscula inicial; Origen de Tareas en minúsculas como en el diseño, porque /cierre escribe «agente» y el Gabinete filtra «n8n».
+- Montos en MXN con formato de moneda «dollar» (signo $): el formato de peso mexicano no se pudo probar y quedó entre las ediciones opcionales.
+- Tareas: Iguala como casilla; Aceptación por escrito como fecha, más la propiedad «Liga a la aceptación».
+- Aprobaciones: Riesgo como texto de una línea; Vence como fecha que llena /pedir-aprobacion; Regla aplicada con los códigos R01 a R12 de la Matriz; rollup «Pilar de la tarea» para las vistas por pilar, sin agregar propiedad Pilar.
+- Personas y accesos: «Checklist de alta y de baja» como relación a Tareas; opciones provisionales de País y Régimen fiscal; fechas «Baja solicitada» y «Baja ejecutada» para el KPI de bajas en 24 h.
+- Clientes: claves del SAT como opciones provisionales de Régimen fiscal y Uso de CFDI; estados del alta de proveedor; encuesta en dos propiedades y «Referido pedido» como fecha.
+- Proyectos: checklist como 9 casillas «Checklist · …»; Setter como texto; 3 niveles de Confidencialidad; código P-AAAA-NN; «Horas incluidas (iguala)»; fechas de QA aprobado y acta por hito en la tabla Hitos del cuerpo; la plantilla es una fila especial que las vistas excluyen por nombre.
+- Facturas y cobros: Total y Neto a recibir como números hasta que la contadora confirme las fórmulas; se agregó Saldo; Días de atraso como fórmula (todavía por agregar); opciones provisionales de Forma de pago y Moneda.
+- Contenido: Pilar editorial con Dinero, Tiempo, Riesgo y ¿Aplica a mi negocio?; Formato y Plataformas provisionales; Palabra clave solo con «Por definir»; se agregaron URL publicada y Fecha de publicación; el semáforo de Voz y los captions de Tijeras van en el cuerpo de la ficha.
+- Métricas: Semáforo como select (no fórmula) hasta fijar la regla en el Diccionario; unidades y «Capturado por» provisionales; KPI con los 9 del Tablero más 26 de los pilares.
+- Páginas: todas en «Propuesta»; Canónica marcada donde el diseño lo dice; «Cuentas críticas y vencimientos» como página privada aparte (no fila de una base); «Cómo trabajamos» en 4 páginas hermanas para compartir solo la de setters; «Cierres mensuales» y «Junta del lunes» como subpáginas de la raíz; «Expediente de proveedor» en Conocimiento y decisiones.
+- Tableros: «Proyectos en riesgo», «Pagos por registrar» y «Aprobaciones dentro de su límite» son provisionales; se crearon las 8 vistas de pilar aunque solo 2 chats abren en Fase 1.
+
+### Método
+
+- Solo se usaron las herramientas de leer y de crear del conector de Notion. Antes de crear cada cosa se buscó en Notion para no duplicarla y se anotó su id al crearla; nada se mandó a la papelera.
+- Las herramientas de editar bases, vistas y páginas se quedaron esperando un permiso que los agentes en segundo plano no pueden recibir. Por eso, desde la base 6 (Tareas), las relaciones de cada base nueva y el rollup «Pilar de la tarea» se escribieron dentro de su CREATE TABLE, como relaciones de dos sentidos hacia bases que ya existían, en el orden del paso 1.
+- Lo que no cupo así quedó en el lote de ediciones: las relaciones de Proyectos y de Facturas y cobros (bases creadas antes de ese cambio), las 2 relaciones de una base consigo misma, la fórmula «Días de atraso», el nombre y la configuración de las vistas por defecto y las correcciones de texto.
+- Notion convierte por su cuenta en enlaces los nombres de archivo y «marca.ai» (`http://CLAUDE.md`, `http://marca.ai`), así que el contenido de las páginas los lleva como código en línea; los que alcanzaron a quedar como enlace están en el lote.
+
+### Ediciones pendientes
+
+Las aplica una sesión en la que tú apruebes las herramientas de editar, o tú a mano en la interfaz de Notion. Son 37 anotaciones: 31 ediciones, 4 opcionales y 2 que solo precisan el texto exacto de otras; la lista completa, una por línea, está en la fila de la construcción. Orden sugerido: primero las columnas, luego las vistas que dependen de ellas y al final las vistas por defecto.
+
+| Qué | Dónde | Cómo |
+|---|---|---|
+| 3 relaciones con su espejo: Proyectos → Clientes, Facturas y cobros → Clientes y Facturas y cobros → Proyectos | Proyectos y Facturas y cobros | Editar la base |
+| 2 relaciones de una base consigo misma: «Reemplaza a» / «Reemplazada por» y «Pieza madre» / «Piezas derivadas» | Conocimiento y decisiones y Contenido | Editar la base |
+| La fórmula «Días de atraso» | Facturas y cobros | Editar la base |
+| La descripción igual a la del diseño (quedó redactada a mano) | Tareas | Editar la base |
+| El prefijo de «ID»: la API rechazó «C» porque pide de 2 a 10 caracteres, y hoy muestra 1, 2, 3 | Contenido | Lo decides tú: «C» a mano en la interfaz u otro prefijo de 2 a 10 caracteres |
+| Renombrar y configurar las 10 «Default view» como «Todas», «Todos» o «Recientes» | Las 10 bases | Editar la vista; las de Proyectos y Facturas y cobros, después de sus columnas |
+| Crear «Cobranza abierta», «Vencidas», «Por estado» y «Borradores por timbrar», y dejar «Calendario de vencimientos» como última pestaña | Facturas y cobros | Crear las vistas cuando existan las columnas; el orden de las pestañas, a mano |
+| Crear «Pagos por registrar (provisional)» y «Cobranza por vencer y vencida» | Tablero del asistente de operación | Crear las vistas enlazadas cuando existan las columnas y moverlas a su lugar |
+| Crear «Cobranza abierta» y «Borradores por timbrar» | Vista · admin | Igual que la fila anterior |
+| Agregar «Pilar de la tarea» contiene el pilar, en OR con «Solicitada por» | El bloque «Aprobaciones pendientes» de las 8 vistas de pilar | A mano en la interfaz (filtro avanzado); si no se puede, cambiar el aviso de cada vista de pilar |
+| Quitar los enlaces automáticos a `http://marca.ai` y `http://CLAUDE.md` (título y contenido de la raíz, Guía de operación de agentes y Estándares de código y checklist de salida a producción) y a `http://wa.me` (Programa de referidos), con el texto en código en línea | 4 páginas | Editar la página |
+| Opcional: `gob.mx` y `sat.gob.mx` como texto (F0-01, F0-10 y Manual de contingencia), el formato de peso mexicano en las columnas de dinero y «construido el 10 y 11 de noviembre» en el aviso final de la raíz | Varias | Editar páginas y bases |
 
 ## Plan y límites
 

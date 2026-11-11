@@ -369,7 +369,12 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo):
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Producto en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, la base Proyectos con la plantilla «Proyecto ganado», «Oferta y precios vigentes» (sección Capacidad), los estándares de código, el checklist de salida a producción y la Matriz de aprobaciones. El repo biblioteca y las plantillas por servicio viven en GitHub (enlaces: por definir cuando existan).
+- **Vista del pilar:** [Vista · producto](https://app.notion.com/p/41579e24d0fe81a7a0cde17a9d486cdf), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más los proyectos activos y las páginas de producto.
+- **Base:** [Proyectos](https://app.notion.com/p/5e022dc6c7ac470db8d0a9ea69e9075b), con la fila [Plantilla · Proyecto ganado](https://app.notion.com/p/41579e24d0fe81ddbc65f62cd413b204), que las vistas excluyen por nombre.
+- **Páginas de Conocimiento y decisiones:** [Oferta y precios vigentes](https://app.notion.com/p/41579e24d0fe813483b3f8bc16ce7391) (sección Capacidad), [Estándares de código y checklist de salida a producción](https://app.notion.com/p/41579e24d0fe81689520ce267a4db783) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86). Cuál versión del checklist de salida a producción manda, la de Notion o la del repo, sigue por definir.
+- El repo biblioteca y las plantillas por servicio viven en GitHub (enlaces: por definir cuando existan).
+
+Las demás bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

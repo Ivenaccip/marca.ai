@@ -34,7 +34,7 @@ Pide aprobación para cualquiera de estos tipos (son los valores de la propiedad
 | Activar automatización | Encender un agente o una automatización |
 | Plantilla de envío | Crear o cambiar el texto de una plantilla que envía n8n |
 
-Antes de crear la tarjeta, revisa la Matriz de aprobaciones (enlace en «Enlaces del cerebro en Notion» del CLAUDE.md raíz; por definir hasta que exista el cerebro). Se aprueba por excepción: no se vuelve a aprobar lo que coincide con algo ya aprobado, por ejemplo:
+Antes de crear la tarjeta, revisa la [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86) (el mismo enlace de «Enlaces del cerebro en Notion» del CLAUDE.md raíz). Se aprueba por excepción: no se vuelve a aprobar lo que coincide con algo ya aprobado, por ejemplo:
 
 - factura igual a la propuesta aprobada;
 - recordatorio con plantilla aprobada;
@@ -42,7 +42,7 @@ Antes de crear la tarjeta, revisa la Matriz de aprobaciones (enlace en «Enlaces
 - respuestas del bot cuando la persona escribe primero;
 - presupuesto semanal de pauta ya aprobado.
 
-Si coincide, no crees tarjeta: di qué regla de la Matriz aplica y con qué aprobación previa coincide (con su enlace) y sigue. Si hay duda, crea la tarjeta. Si la Matriz aún no existe, solo esas 5 excepciones valen; todo lo demás de la tabla pide tarjeta. Cambiar el texto de una plantilla obliga a aprobarla de nuevo.
+Si coincide, no crees tarjeta: di qué regla de la Matriz aplica y con qué aprobación previa coincide (con su enlace) y sigue. Si hay duda, crea la tarjeta. Mientras la Matriz no esté «Vigente» (se creó en «Propuesta»), solo esas 5 excepciones valen; todo lo demás de la tabla pide tarjeta. Cambiar el texto de una plantilla obliga a aprobarla de nuevo.
 
 ## 2. Arma la tarjeta
 
@@ -53,7 +53,7 @@ Si coincide, no crees tarjeta: di qué regla de la Matriz aplica y con qué apro
 | Propiedad | Qué va |
 |---|---|
 | Tipo | Uno de los 10 valores de la tabla de arriba |
-| Monto MXN y Riesgo | Monto en pesos; di si es más IVA o con IVA incluido. Si el costo es en dólares, conviértelo y anota el tipo de cambio. 0 si no hay dinero. Riesgo: qué puede salir mal, en una línea (si la base ya trae una escala de Riesgo, usa su valor; la escala está por definir al crear la base) |
+| Monto MXN y Riesgo | Monto en pesos; di si es más IVA o con IVA incluido. Si el costo es en dólares, conviértelo y anota el tipo de cambio. 0 si no hay dinero. Riesgo: qué puede salir mal, en una línea (la base lo trae como texto de una línea; si después se le agrega una escala de Riesgo, usa su valor: la escala está por definir en la Matriz) |
 | Borrador exacto (vista previa) | El texto, monto, destinatarios o cambio exacto que se va a ejecutar, completo. Si es un correo, también el enlace al borrador de Gmail |
 | Última edición del borrador | Fecha y hora de la última versión del borrador |
 | Solicitada por | El agente o la persona que pide |
@@ -91,6 +91,6 @@ Según el tipo:
 - **Sin decisión:** la tarjeta pasa a la siguiente ventana del dueño y nunca escala a un puesto vacío. A las 48 h vence («Vencida») y no se ejecuta; si todavía hace falta, se pide de nuevo.
 - **Falló:** no reintentes pasos que envían; avisa al dueño.
 
-## Si la base Aprobaciones aún no existe
+## Si la base Aprobaciones no responde
 
-Dilo, deja la tarjeta completa como texto en el chat y no ejecutes la acción: el dueño la hace a mano o espera a que exista la base. Nunca la des por aprobada por una respuesta en el chat.
+Si esta sesión no tiene conector de Notion o la base no responde, dilo, deja la tarjeta completa como texto en el chat y no ejecutes la acción: el dueño la hace a mano o espera a que la base responda. Nunca la des por aprobada por una respuesta en el chat.

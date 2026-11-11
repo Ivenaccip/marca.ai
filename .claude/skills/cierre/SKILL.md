@@ -69,6 +69,6 @@ Aprobaciones: ... (tarjetas abiertas con su Vence, o «ninguna»)
 1. Crea la fila en Bitácora y planes y actualiza Tareas y Conocimiento y decisiones como arriba. Fuera de esas tres bases, no escribas en ninguna que no esté en el campo «Puede escribir en» del agente.
 2. Responde en 3 líneas: enlace a la fila, Tareas actualizadas o creadas, y aprobaciones pendientes con su Vence. Si algo pide aprobación y no tiene tarjeta, repítelo al final.
 
-**Si Bitácora y planes aún no existe** o esta sesión no tiene conector de Notion: dilo, entrega la fila completa como texto en el chat para pegarla cuando exista el cerebro y no la guardes en el repo (en el repo no van datos del negocio).
+**Si esta sesión no tiene conector de Notion o Bitácora y planes no responde:** dilo, entrega la fila completa como texto en el chat para pegarla después y no la guardes en el repo (en el repo no van datos del negocio).
 
 **En una rutina o en una sesión sin el dueño presente:** no pidas confirmaciones. Si no hubo novedad, no escribas nada (las corridas sin novedad no escriben). Si la hubo, escribe la fila con Tipo «Corrida» y no crees decisiones en Conocimiento y decisiones. El Gabinete no usa esta skill: su fila es el «Plan del día» que define su instrucción (`pilares/automatizaciones/gabinete/CLAUDE.md`).

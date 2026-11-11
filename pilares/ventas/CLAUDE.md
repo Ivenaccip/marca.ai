@@ -294,7 +294,11 @@ Preguntas abiertas que tocan este pilar (por confirmar contigo; el número es el
 
 ## Contexto en Notion
 
-Enlace a la Vista del pilar Ventas en Notion: **por definir** hasta que exista el cerebro (las 10 bases se crean en diciembre, Fase 1). Cuando exista, aquí van los enlaces a la Vista del pilar, «Oferta y precios vigentes», el Playbook de ventas, el Diccionario comercial, el Plan de compensación, el Programa de referidos y la Matriz de aprobaciones.
+- **Vista del pilar:** [Vista · ventas](https://app.notion.com/p/41579e24d0fe81159978c85907ecf94c), con la cola de Tareas, las Aprobaciones pendientes, la Bitácora reciente y los KPIs del pilar, más sus páginas comerciales.
+- **Páginas de Conocimiento y decisiones:** [Oferta y precios vigentes](https://app.notion.com/p/41579e24d0fe813483b3f8bc16ce7391), [Playbook de ventas](https://app.notion.com/p/41579e24d0fe81448674c68180aff1af), [Diccionario comercial](https://app.notion.com/p/41579e24d0fe812b9c8fdc26d4665181), [Plan de compensación v1](https://app.notion.com/p/41579e24d0fe81fe82d0fb9db71a0662), [Programa de referidos](https://app.notion.com/p/41579e24d0fe8149be2cefa01da4f30e) y [Matriz de aprobaciones](https://app.notion.com/p/41579e24d0fe81a4b6a0de54731f7e86).
+- **Para setters:** [Cómo trabajamos · Setters](https://app.notion.com/p/41579e24d0fe81b987a9e0dcef8f59c4), la página de solo lectura; compartirla como invitado lo haces tú a mano.
+
+Las bases y la Guía de operación de agentes están en «Enlaces del cerebro en Notion» del [CLAUDE.md raíz](../../CLAUDE.md#enlaces-del-cerebro-en-notion).
 
 ## Ver también
 

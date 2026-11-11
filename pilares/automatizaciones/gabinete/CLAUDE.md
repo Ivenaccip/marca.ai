@@ -151,7 +151,7 @@ La revisión trimestral la decides tú y la prepara el Gabinete. Cubre metas, of
 
 - **Hasta enero,** el Gabinete solo lista los vencimientos fiscales: el cierre lo haces a mano con su plantilla (el asistente desde enero) y el paquete de diciembre va el lunes 4 de enero, porque el 3 cae en domingo.
 - **Desde el cierre de enero (1 de febrero de 2027),** Enlace corre dentro de esta misma corrida, sin corrida aparte: el día 1 crea la página «Cierre AAAA-MM» y el día 3 (o el siguiente día hábil) arma el borrador del paquete y del correo a la contadora. Su instrucción está en [pilares/admin/CLAUDE.md](../../admin/CLAUDE.md#enlace).
-- **Al encender Enlace,** esta rutina suma por PR solo lo que Enlace usa (Gmail en borradores, Google Drive y Google Calendar para los eventos fiscales) y sus bases (Conocimiento y decisiones para las reglas fiscales y la página «Cierre AAAA-MM», cuya ubicación está por definir).
+- **Al encender Enlace,** esta rutina suma por PR solo lo que Enlace usa (Gmail en borradores, Google Drive y Google Calendar para los eventos fiscales) y sus bases (Conocimiento y decisiones para las reglas fiscales y la página «Cierre AAAA-MM», que provisionalmente vive dentro de [Cierres mensuales](https://app.notion.com/p/41579e24d0fe81118a73e1895b75202f) y se duplica desde su plantilla).
 - **Por definir:** qué pasa cuando el día 1 cae en sábado o domingo, porque la rutina solo corre de lunes a viernes (por ejemplo, correrlo el siguiente día hábil, como el día 3).
 
 ## Lo que se suma a esta corrida cuando se encienda
@@ -255,7 +255,7 @@ Solo estas emergencias pueden interrumpirte fuera de tus ventanas de 9:30 y 17:3
 ### Antes de crearla
 
 1. Estás en Fase 1 (diciembre). La otra mitad de su condición, que el conector de Google Calendar aparezca en la rutina, se comprueba al crearla, en «Prueba antes de encenderla».
-2. Existen en Notion las bases Tareas, Aprobaciones, Proyectos, Bitácora y planes y Facturas y cobros, la página «Obligaciones fiscales» y, si ya está, la Matriz de aprobaciones.
+2. Existen en Notion las bases Tareas, Aprobaciones, Proyectos, Bitácora y planes y Facturas y cobros, la página «Obligaciones fiscales» y, si ya está, la Matriz de aprobaciones. Ya existen todas desde el 11 de noviembre de 2026 (enlaces en el CLAUDE.md raíz), pero a Facturas y cobros le falta la columna «Días de atraso», que el Gabinete lee los lunes: está en las [ediciones pendientes](../../../docs/02-cerebro-notion.md#ediciones-pendientes).
 3. Las emergencias P0 están elegidas en este archivo (por PR).
 4. La fila del Gabinete en la tabla del README tiene interruptor y plan B (hoy: interruptor por definir).
 5. Tarjeta «Activar automatización» aprobada.
